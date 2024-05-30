@@ -9,7 +9,6 @@ Learning Objectives
 This room will teach the following topics:
 
 - What are Search processing Language?  
-    
 - How to apply filters to narrow down results.
 - Using transformational commands.
 - Changing the order of the results.

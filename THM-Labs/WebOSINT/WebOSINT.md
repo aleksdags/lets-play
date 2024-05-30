@@ -1,5 +1,4 @@
 Conducting basic open source intelligence research on a website
-9/8/2023
 # Task 1  When A Website Does Not Exist
 
 What's the first thing you do when you are given the name of a business to check out? Fire up the ol' web browser, find the website and check it out, right?  
@@ -36,33 +35,38 @@ We're looking for any data we might be able to use as pivot points. Maybe an ema
 
 Anyway, let's see what we can find out!
 
-Answer the questions below
+#### Answer the questions below
 
 What is the name of the company the domain was registered with?
 
 Ans: NAMECHEAP INC
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908003632.png]]
+
+![](screenshots/webosint_screenshot_001.png)
 
 What phone number is listed for the registration company? (do not include country code or special characters/spaces)
 
 Ans: 6613102107
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908003844.png]]
+
+![](screenshots/webosint_screenshot_002.png)
 
 What is the first nameserver listed for the site?
 
 Ans: NS1.BRAINYDNS.COM
-![](THM-Labs/WebOSINT/screenshots/Pasted%20image%2020230908004014.png)
+
+![](screenshots/webosint_screenshot_003.png)
 
 What is listed for the name of the registrant?
 
 Ans: Redacted for Privacy
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908004317.png]]
+
+![](screenshots/webosint_screenshot_004.png)
 
 What country is listed for the registrant?
 
 Ans: Panama
 The current registrant is located in Iceland however it is not the answer, after looking up the question, the accepted answer is Panama. The question needs to be updated. 
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908005415.png]]
+
+![](screenshots/webosint_screenshot_005.png)
 
 # Task 3  Ghosts of Websites Past
 
@@ -76,20 +80,22 @@ Either with the browser extension, or just by going to archive.org and searching
 
 Looking at the historical information available for the site, you should be able to answer the following questions without too much trouble.
 
-Answer the questions below
+#### Answer the questions below
 
 What is the first name of the blog's author?
 
 Find the first capture of the link. Open one article and the name should be there.
 
 Ans: Steve
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908010323.png]]
+
+![](screenshots/webosint_screenshot_006.png)
 
 What city and country was the author writing from?
 
 On the same page, there are tags at the end of the article. Of the tags is gwangju which sounds like a place.
 
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908010458.png]]
+
+![](screenshots/webosint_screenshot_007.png)
 
 Searching it on Google reveals the Gwangju is indeed a place on South Korea.
 
@@ -99,18 +105,18 @@ Other clues can be seen on the list of articles.
 - Jeju Island
 - KDJ Convention Center
 
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908010633.png]]
 
+![](screenshots/webosint_screenshot_008.png)
 Ans: Gwangju, South Korea
 
 [Research] What is the name (in English) of the temple inside the National Park the author frequently visits?
 
 After skimming through he's articles, I found that he goes to Mudeungsan national park however, the name of the temple isn't in the article. Googling the park shows the name of the temple.
 
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908011124.png]]
 
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908011229.png]]
+![](screenshots/webosint_screenshot_009.png)
 
+![](screenshots/webosint_screenshot_010.png)
 # Task 4  Digging into DNS
 
 So far we've gathered some good info about the content that was on our target website, even though it hasn't been live for several years.
@@ -123,13 +129,14 @@ ViewDNS.info provides a convenient UI for looking up registration information on
 
 Take a look at the search options available and see if you can answer these questions.
 
-Answer the questions below
+#### Answer the questions below
 
 What was RepublicOfKoffee.com's IP address as of October 2016?
 
 Use the IP History tool
 
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908011416.png]]
+
+![](screenshots/webosint_screenshot_011.png)
 
 Based on the other domains hosted on the same IP address, what kind of hosting service can we safely assume our target uses?
 
@@ -144,7 +151,6 @@ Since the room is already 2 years old. There's been a lot of changes to the IP. 
 Ans: 4
 
 
-
 # Task 5  Taking Off The Training Wheels
 Congratulations on making it this far.
 
@@ -156,45 +162,51 @@ All I have for you, is a domain:
 
 Good luck!
 
-Answer the questions below
+#### Answer the questions below
 
 What is the second nameserver listed for the domain?
 
 Ans: NS2.HEAT.NET
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908220058.png]]
+
+![](screenshots/webosint_screenshot_012.png)
 
 What IP address was the domain listed on as of December 2011?
 
 Ans: 72.52.192.240
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908220134.png]]
+
+![](screenshots/webosint_screenshot_013.png)
 
 Based on domains that share the same IP, what kind of hosting service is the domain owner using?
 
 Ans: Shared
 There were no domains at the time of answering, so basing off the clue, I answered shared.
 
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908220412.png]]
+
+![](screenshots/webosint_screenshot_014.png)
 
 On what date did was the site first captured by the internet archive? (MM/DD/YY format)
 
 Ans: 06/01/97
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908220540.png]]
+
+![](screenshots/webosint_screenshot_015.png)
 
 What is the first sentence of the first body paragraph from the final capture of 2001?
 
 Ans: After years of great online gaming, it’s time to say good-bye.
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908220625.png]]
+
+![](screenshots/webosint_screenshot_016.png)
 
 Using your search engine skills, what was the name of the company that was responsible for the original version of the site? 
 
 Ans: Segasoft
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908220828.png]]
+
+![](screenshots/webosint_screenshot_017.png)
 
 What does the first header on the site on the last capture of 2010 say?
 
 Ans: Heat.net – Heating and Cooling
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230908220903.png]]
 
+![](screenshots/webosint_screenshot_018.png)
 # Task 6  Taking A Peek Under The Hood Of A Website
 
 Isn't it kind of interesting how the website disappeared for a period of time and came back?
@@ -225,8 +237,6 @@ Once the source code of the page loads, it's time to look around. You don't have
 
 As easy as that may be to read, if it was buried inside a gigantic page full of code it could still be easy to miss. That's where ctrl-F comes in. Here are some good things to search for with ctrl-f:
 
-  
-
 |   |   |   |
 |---|---|---|
 |Search Term|Explanation|More information|
@@ -246,7 +256,7 @@ These following questions refer to heat[dot]net/36/need-to-hire-a-commercial-he
 
 Have at it!
 
-Answer the questions below
+#### Answer the questions below
 
 How many internal links are in the text of the article?
 
@@ -298,10 +308,10 @@ Use the tools in Task 4 to confirm the link between the two sites. Try hard to 
 
 For my initial move, I looked at the IP History of both web sites. 
 
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230911231243.png]]
+![](screenshots/webosint_screenshot_019.png)
 heat.net IP History
 
-![[THM-Labs/WebOSINT/screenshots/Pasted image 20230911231311.png]]
+![](screenshots/webosint_screenshot_020.png)
 purchase.org IP History
 
 Both used to be owned by LIQUIDWEB, however it does not match the given clue in the answer, and I wasn't sure where to look next. I tried using WHOIS but it didn't really help me. Looking at an online writeup apparently it is liquidweb but written differently. The correct answer is liquid web, l.l.c

@@ -1,5 +1,3 @@
-8/3/2023
-
 You work as a Tier 1 Security Analyst L1 for a Managed Security Service Provider (MSSP). Again, you're tasked with monitoring network alerts.
 
 An alert triggered: **Misc activity**, **A Network Trojan Was Detected**, and **Potential Corporate Privacy Violation**. 
@@ -20,7 +18,7 @@ If you don't see a virtual machine load then click the Show Split View button.
 
 ![Show Split Screen if needed](https://assets.tryhackme.com/additional/challs/warzone2-split-view.png)  
 
-Answer the questions below
+#### Answer the questions below
 
 What was the alert signature for **A Network Trojan was Detected**?
 
@@ -50,7 +48,7 @@ What is the name of the payload within the cab file? 
 Grab the file hash then upload to virustotal
 
 Ans: draw.dll
-![[THM-Labs/Warzone 2/screenshots/Pasted image 20230804010446.png]]
+![](screenshots/warzone2_screenshot_001.png)
 
 What is the user-agent associated with this network traffic?
 

@@ -1,4 +1,3 @@
-  
 Whats the version and year of the windows machine?  
 Settings > System > About
 systeminfo
@@ -82,7 +81,6 @@ What was the extension name of the shell uploaded via the servers website?
 What was the last port the attacker opened?  
 Firewall > Inbound > First entry
 1337
-
 
 Check for DNS poisoning, what site was targeted?
 google.com
