@@ -1,5 +1,3 @@
-8/6/2023
-
 ![](https://i.ibb.co/T1tPZdn/Depositphotos-174220344-s-2019.jpg)  
 
 Three machines in the Finance department at Pfeffer PLC were compromised. We suspect the initial source of the compromise happened through a phishing attempt and by an infected USB drive. The Incident Response team managed to pull the network traffic logs from the endpoints. Use Brim to investigate the network traffic for any indicators of an attack and determine who stands behind the attacks. 
@@ -57,7 +55,7 @@ Answer is not in VirusTotal, both links have no comments in the community tab. I
 
 https://bazaar.abuse.ch/sample/a2d525c9bd8128160c64990fa84afc4da2bea8a72cfb4ca42f14cddac1343df2/
 
-![[THM-Labs/Masterminds/screenshots/Pasted image 20230807002025.png]]
+![[screenshots/Masterminds_001.png]]
 ## Infection 2
 Please, navigate to the Infection2 packet capture in Brim to investigate the compromise event for the second machine.
 
@@ -69,7 +67,7 @@ Provide the IP address of the victim machine. 
 
 Use defined queries, Unique Network Connections
 
-![[THM-Labs/Masterminds/screenshots/Pasted image 20230807191956.png]]
+![[screenshots/Masterminds_002.png]]
 
 In this image we can see that there's a lot of traffic coming from 192.168.75.146
 
@@ -79,7 +77,7 @@ Provide the IP address the victim made the POST connections to. 
 
 Using queries again, HTTP Post Requests, all of the POST requests are pointing to 5.181.156.252
 
-![[THM-Labs/Masterminds/screenshots/Pasted image 20230807192123.png]]
+![[screenshots/Masterminds_003.png]]
 
 Ans: 5.181.156.252
 
@@ -95,7 +93,7 @@ Since we are looking for downloads, we can filter our GET
 
 `method=="GET" id.orig_h==192.168.75.146`
 
-![[THM-Labs/Masterminds/screenshots/Pasted image 20230807193907.png]]
+![[screenshots/Masterminds_004.png]]
 
 Ans: hypercustom.top
 
@@ -111,13 +109,13 @@ There were 2 Suricata "A Network Trojan was detected" alerts. What were the sour
 
 User filter, Suricata Alerts by Category
 
-![[THM-Labs/Masterminds/screenshots/Pasted image 20230807194022.png]]
+![[screenshots/Masterminds_005.png]]
 
 Ans: 192.168.75.146, 45.95.203.28
 
 Taking a look at .top domain in HTTP requests, provide the name of the stealer (Trojan that gathers information from a system) involved in this packet capture using [URLhaus Database](https://urlhaus.abuse.ch/). 
 
-![[THM-Labs/Masterminds/screenshots/Pasted image 20230807194142.png]]
+![[screenshots/Masterminds_006.png]]
 
 Ans: Redline Stealer
 ## Infection 3
@@ -139,7 +137,7 @@ Provide three C2 domains from which the binaries were downloaded (starting from 
 
 Filter out GET method with the victim IP, then sort the timestamps or scroll to the end.
 
-![[THM-Labs/Masterminds/screenshots/Pasted image 20230807204242.png]]
+![[screenshots/Masterminds_007.png]]
 
 Ans: efhoahegue.ru, afhoahegue.ru, xfhoahegue.ru
 
@@ -153,7 +151,7 @@ Use the Unique DNS Queries
 
 `_path=="dns" | count() by query | query=="efhoahegue.ru"`
 
-![[THM-Labs/Masterminds/screenshots/Pasted image 20230807210322.png]]
+![[screenshots/Masterminds_008.png]]
 
 Ans: 2
 
@@ -163,7 +161,7 @@ Filter HTTP GET requests using the first domain IP, looking at the uri, only 5 e
 
 `_path=="http" | method=="GET" | 162.217.98.146`
 
-![[THM-Labs/Masterminds/screenshots/Pasted image 20230807210432.png]]
+![[screenshots/Masterminds_009.png]]
 
 Ans: 5
 
@@ -179,7 +177,7 @@ Count all the dns requests
 
 `_path=="dns" | count()`
 
-![[THM-Labs/Masterminds/screenshots/Pasted image 20230807210739.png]]
+![[screenshots/Masterminds_010.png]]
 
 Ans: 986
 

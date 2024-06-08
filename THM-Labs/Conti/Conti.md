@@ -52,7 +52,7 @@ Can you identify the location of the ransomware?
 index="main" source="WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=11
 ```
 
-![](screenshots/Pasted%20image%2020240429220724.png)
+![](screenshots/Conti_001.png)
 
 Ans: `c:\Users\Administrator\Documents\cmd.exe`
 
@@ -60,7 +60,7 @@ What is the Sysmon event ID for the related file creation event?
 
 https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 
-![](screenshots/Pasted%20image%2020240429212335.png)
+![](screenshots/Conti_002.png)
 
 Ans: 11
 
@@ -76,7 +76,7 @@ What file was saved to multiple folder locations?
 index="main" source="WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=11 RuleName=Downloads
 ```
 
-![](screenshots/Pasted%20image%2020240429213919.png)
+![](screenshots/Conti_003.png)
 
 Ans: readme.txt
 
@@ -98,7 +98,7 @@ index="main" source="WinEventLog:Microsoft-Windows-Sysmon/Operational"
 
 Hint said to look at Event Code 8, there are only 2 entries here which I assumed when the attacker started and migrated.
 
-![](screenshots/Pasted%20image%2020240430211437.png)
+![](screenshots/Conti_004.png)
 
 Adding SourceImage in the selecting field shows us the answers.
 
@@ -112,7 +112,7 @@ lsass.exe is a windows process is used in security related tasks such as verifyi
 
 On the other hand, unsecapp.exe is used to execute WMI scipts.
 
-![](screenshots/Pasted%20image%2020240430220231.png)
+![](screenshots/Conti_005.png)
 
 Ans: `C:\Windows\System32\lsass.exe`
 
@@ -124,7 +124,7 @@ Move from sysmon logs to iis and searched for unfamiliar post requests in the cs
 index="main" sourcetype=iis cs_method=POST
 ```
 
-![](screenshots/Pasted%20image%2020240430222834.png)
+![](screenshots/Conti_006.png)
 
 Webshell deployed in IIS are in aspx
 

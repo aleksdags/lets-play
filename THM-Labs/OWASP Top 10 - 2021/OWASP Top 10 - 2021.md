@@ -51,15 +51,15 @@ The application exposes a direct object reference through the `id` parameter i
 
 Look at other users' notes. What is the flag?
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231103001734.png]]
+![[screenshots/OWASPTop102021_001.png]]
 
 id = 3
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231103001803.png]]
+![[screenshots/OWASPTop102021_002.png]]
 
 id = 5
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231103001818.png]]
+![[screenshots/OWASPTop102021_003.png]]
 
 id = 0
 
@@ -189,7 +189,7 @@ What is the name of the mentioned directory?
 
 Using the inspector, we check the pages for notes.
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231103003154.png]]
+![[screenshots/OWASPTop102021_004.png]]
 
 Ans: /assets
 
@@ -203,7 +203,7 @@ Use the supporting material to access the sensitive data. What is the password h
 
 Get the webapp.db and open it. Go to Browse Data and change the table to users, there we can the hashed username and password for each account.
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231103003600.png]]
+![[screenshots/OWASPTop102021_005.png]]
 
 Ans: 6eea9b7ef19179a06954edd0f6c05ceb
 
@@ -218,7 +218,7 @@ Log in as the admin. What is the flag?
 
 We can now use the admin account.
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231103003850.png]]
+![[screenshots/OWASPTop102021_006.png]]
 
 Ans: THM{Yzc2YjdkMjE5N2VjMzNhOTE3NjdiMjdl}
 
@@ -301,7 +301,7 @@ What strange text file is in the website's root directory?
 
 Entering $(ls) we see drpepper.txt
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231105214341.png]]
+![[screenshots/OWASPTop102021_007.png]]
 
 Ans: drpepper.txt
 
@@ -364,7 +364,7 @@ What user is this app running as?
 
 Enter $(whoami) to see the user
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231105215032.png]]
+![[screenshots/OWASPTop102021_008.png]]
 
 Ans: apache
 
@@ -378,7 +378,7 @@ What version of Alpine Linux is running?
 
 Run &(cat /etc/os-release), the machine uses version 3.16.0
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231105220053.png]]
+![[screenshots/OWASPTop102021_009.png]]
 
 Ans: 3.16.0
 
@@ -412,13 +412,13 @@ Try to reset joseph's password. Keep in mind the method used by the site to vali
 
 Go to the reset password which asks for a username, I entered the most obvious one which is joseph and proceeds to the next question. There are 3 options, 2 which are impossible to answer so I went with josephs favorite color. I tried the basic colors first, I tried `red` first which was incorrect, then `blue`, then `green`.
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231105221819.png]]
+![[screenshots/OWASPTop102021_010.png]]
 
 What is the value of the flag in joseph's account?
 
 Once we log in with the new password, there are 3 available tabs. I went to Private and the flag is there.
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231105222027.png]]
+![[screenshots/OWASPTop102021_011.png]]
 Ans: THM{Not_3ven_c4tz_c0uld_sav3_U!}
 
 # Task 12  5. Security Misconfiguration
@@ -473,7 +473,7 @@ Modify the code to read the contents of the `app.py` file, which contains the�
 import os; print(os.popen("cat app.py").read())
 ```
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231106232515.png]]
+![[screenshots/OWASPTop102021_012.png]]
 
 Ans: THM{Just_a_tiny_misconfiguration}
 # Task 13  6. Vulnerable and Outdated Components
@@ -570,13 +570,13 @@ Navigate to MACHINE_IP where you'll find a vulnerable application. All the inf
 
 Looking up CSE bookstore we already see an exploit on the results. 
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231106234022.png]]
+![[screenshots/OWASPTop102021_013.png]]
 
 We can confirm that this is for the given site as there is a link for projectworlds on the footer and is also noted in the exploit page.
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231106234257.png]]
+![[screenshots/OWASPTop102021_014.png]]
 %% Homepage footer %%
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231106234535.png]]
+![[screenshots/OWASPTop102021_015.png]]
 
 Download the exploit then run the payload.
 
@@ -586,7 +586,7 @@ python3 47887.py http://MACHINE_IP
 
 What is the content of the /opt/flag.txt file?
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231107000030.png]]
+![[screenshots/OWASPTop102021_016.png]]
 Ans: THM{But_1ts_n0t_my_f4ult!}
 
 # Task 16  7. Identification and Authentication Failures
@@ -595,11 +595,8 @@ Ans: THM{But_1ts_n0t_my_f4ult!}
 
 Authentication and session management constitute core components of modern web applications. Authentication allows users to gain access to web applications by verifying their identities. The most common form of authentication is using a username and password mechanism. A user would enter these credentials, and the server would verify them. The server would then provide the users' browser with a session cookie if they are correct. A session cookie is needed because web servers use HTTP(S) to communicate, which is stateless. Attaching session cookies means the server will know who is sending what data. The server can then keep track of users' actions. 
 
-  
-
 If an attacker is able to find flaws in an authentication mechanism, they might successfully gain access to other users' accounts. This would allow the attacker to access sensitive data (depending on the purpose of the application). Some common flaws in authentication mechanisms include the following:  
   
-
 - **Brute force attacks:** If a web application uses usernames and passwords, an attacker can try to launch brute force attacks that allow them to guess the username and passwords using multiple authentication attempts. 
 - **Use of weak credentials:** Web applications should set strong password policies. If applications allow users to set passwords such as "password1" or common passwords, an attacker can easily guess them and access user accounts.
 - **Weak Session Cookies:** Session cookies are how the server keeps track of users. If session cookies contain predictable values, attackers can set their own session cookies and access users' accounts. 
@@ -621,15 +618,16 @@ Let's understand this with the help of an example, say there is an existing user
 To see this in action, go to MACHINE_IP and try to register with `darren` as your username. You'll see that the user already exists, so try to register " darren" instead, and you'll see that you are now logged in and can see the content present only in darren's account, which in our case, is the flag that you need to retrieve.
 
 What is the flag that you found in darren's account?
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231107225243.png]]
+
+![[screenshots/OWASPTop102021_017.png]]
 
 Ans: fe86079416a21a3c99937fea8874b667
 
 Now try to do the same trick and see if you can log in as arthur.  
 
-
 What is the flag that you found in arthur's account?
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231107225340.png]]
+
+![[screenshots/OWASPTop102021_018.png]]
 
 Ans: d9ac0f7db4fda460ac3edeb75d75e16e
 # Task 18  8. Software and Data Integrity Failures
@@ -690,7 +688,8 @@ The correct way to insert the library in your HTML code would be to use SRI and 
 You can go to [https://www.srihash.org/](https://www.srihash.org/) to generate hashes for any library if needed.
 
 What is the SHA-256 hash of `https://code.jquery.com/jquery-1.12.4.min.js`?
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231107233413.png]]
+
+![[screenshots/OWASPTop102021_019.png]]
 
 Ans: sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=
 
@@ -750,7 +749,8 @@ Depending on your browser, you will be able to edit cookies from the following t
 ![Chrome Developer Tools](https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/cd52fcfd91df145fb31d7bad9b56ebdc.png)
 
 What is the name of the website's cookie containing a JWT token?
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231107233956.png]]
+
+![[screenshots/OWASPTop102021_020.png]]
 
 Ans: jwt-session
 
@@ -773,7 +773,8 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjk5Mzc1
 Replace the value of the cookie then reload the page.
 
 What is the flag presented to the admin user?
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231108001159.png]]
+
+![[screenshots/OWASPTop102021_021.png]]
 
 Ans: THM{Dont_take_cookies_from_strangers}
 
@@ -858,7 +859,7 @@ Answer the questions below
 
 Explore the website. What is the only host allowed to access the admin area?
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231108232325.png]]
+![[screenshots/OWASPTop102021_022.png]]
 
 Ans: localhost
 
@@ -868,7 +869,7 @@ Check the "Download Resume" button. Where does the server parameter point to?
 
 Using SSRF, make the application send the request to your AttackBox instead of the secure file storage. Are there any API keys in the intercepted request?
 
-![[THM-Labs/OWASP Top 10 - 2021/screenshots/Pasted image 20231108232908.png]]
+![[screenshots/OWASPTop102021_023.png]]
 
 Ans: THM{Hello_Im_just_an_API_key}
 

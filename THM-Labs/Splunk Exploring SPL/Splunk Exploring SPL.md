@@ -26,11 +26,12 @@ Before moving forward, deploy the machine. You can access this lab in the Attack
 **Note:** For this room, we will work on the index `Windowslogs`.
 
 What is the name of the host in the Data Summary tab?
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231120230547.png]]
+![[screenshots/Splunk_Exploring_SPL_001.png]]
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231120230531.png]]
+![[screenshots/Splunk_Exploring_SPL_002.png]]
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231120224746.png]]
+![[screenshots/Splunk_Exploring_SPL_003.png]]
+
 Ans:  cyber-host
 # Task 3  Search & Reporting App Overview
 **Search & Reporting App** is the default interface used to search and analyze the data on the Splunk Home page. It has various functionalities that assist analysts in improving the search experience.
@@ -78,19 +79,22 @@ Some important points to understand about the sidebar are explained below:
 Answer the questions below
 
 In the search History, what is the 7th search query in the list? (excluding your searches from today)
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231120230823.png]]
+
+![[screenshots/Splunk_Exploring_SPL_004.png]]
+
 Ans: ```index=windowslogs | chart count(EventCode) by Image```
 
 In the left field panel, which Source IP has recorded max events?  
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231120235834.png]]
+![[screenshots/Splunk_Exploring_SPL_005.png]]
 
 Ans: 172.90.12.11
 
 How many events are returned when we apply the time filter to display events on 04/15/2022 and Time from 08:05 AM to 08:06 AM?
 
 Use the Date time range and change the parameter to between. Set the given date and time. 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231121000113.png]]
+
+![[screenshots/Splunk_Exploring_SPL_006.png]]
 
 Ans: 134
 # Task 4  Splunk Processing Language Overview
@@ -119,7 +123,7 @@ Comparison Operators
 
 **Search Query:** `index=windowslogs AccountName !=SYSTEM`  
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231121205846.png]]
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5e8dd9a4a45e18443162feab/room-content/681a126a98263612b87def7014583ffb.png)
 
 Boolean Operators
 
@@ -137,8 +141,6 @@ Splunk supports the following Boolean operators, which can be very handy in sea
 **Search Query:** `index=windowslogs AccountName !=SYSTEM **AND** AccountName=James`  
 
 ![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5e8dd9a4a45e18443162feab/room-content/42c8963dccbd05128f52665c38877f47.png)  
-
-  
 
 Wild Card
 
@@ -163,7 +165,7 @@ How many Events are returned when searching for Event ID 1 **AND** User as *Ja
 index=windowslogs EventID=1 AND User=*James*
 ```
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231121212937.png]]
+![[screenshots/Splunk_Exploring_SPL_007.png]]
 
 Ans: 4
 
@@ -173,14 +175,14 @@ How many events are observed with Destination IP 172.18.39.6 AND destination Por
 index=windowslogs DestinationIp=172.18.39.6 AND DestinationPort="135"
 ```
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231121213142.png]]
+![[screenshots/Splunk_Exploring_SPL_008.png]]
 
 Ans: 4
 
 What is the Source IP with highest count returned with this Search query?  
 Search Query: index=windowslogs  Hostname="Salena.Adam" DestinationIp="172.18.38.5"  
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231121213315.png]]
+![[screenshots/Splunk_Exploring_SPL_009.png]]
 
 Ans: 172.90.12.11
 
@@ -190,13 +192,13 @@ In the index windowslogs, search for all the events that contain the term **cyb
 index=windowslogs cyber
 ```
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231121213417.png]]
+![[screenshots/Splunk_Exploring_SPL_010.png]]
 
 Ans: 0
 
 Now search for the term **cyber\***, how many events are returned?
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231121213501.png]]
+![[screenshots/Splunk_Exploring_SPL_011.png]]
 
 Ans: 12256
 
@@ -273,7 +275,7 @@ What is the third EventID returned against this search query?
 
 Search Query: `index=windowslogs | table _time EventID Hostname SourceName | reverse` 
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231121215439.png]]
+![[screenshots/Splunk_Exploring_SPL_012.png]]
 
 Ans: 4103
 
@@ -283,7 +285,8 @@ Use the dedup command against the Hostname field before the reverse command in
 index=windowslogs | table _time EventID Hostname SourceName | dedup Hostname 
 | reverse
 ```
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231121215601.png]]
+
+![[screenshots/Splunk_Exploring_SPL_013.png]]
 
 Ans: Salena.Adam
 
@@ -304,7 +307,6 @@ This search query will create a table with three columns selected and ignore all
 
 ![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5e8dd9a4a45e18443162feab/room-content/643f5cc127276645eb0fd7fdb339cb29.png)
 
-  
 
 Head
 
@@ -373,7 +375,7 @@ index=windowslogs | table _time EventID Hostname SourceName
 | reverse
 ```
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231121220531.png]]
+![[screenshots/Splunk_Exploring_SPL_014.png]]
 
 Ans: James.browne
 
@@ -384,7 +386,7 @@ index=windowslogs | table _time EventID Hostname SourceName
 |  tail
 ```
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231121220502.png]]
+![[screenshots/Splunk_Exploring_SPL_015.png]]
 
 Ans: 4103
 
@@ -395,7 +397,7 @@ index=windowslogs | table _time EventID Hostname SourceName
 | sort SourceName
 ```
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231121220715.png]]
+![[screenshots/Splunk_Exploring_SPL_016.png]]
 
 Ans: Microsoft-Windows-Directory-Services-SAM
 
@@ -510,7 +512,7 @@ index=windowslogs
 | top limit=8 Image
 ```
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231122234811.png]]
+![[screenshots/Splunk_Exploring_SPL_017.png]]
 
 Ans: 196
 
@@ -521,7 +523,7 @@ index=windowslogs
 | rare User
 ```
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231122235122.png]]
+![[screenshots/Splunk_Exploring_SPL_018.png]]
 
 Ans: James
 
@@ -532,8 +534,16 @@ index=windowslogs
 | chart count by Image
 ```
 
-![[THM-Labs/Splunk Exploring SPL/screenshots/Pasted image 20231123001614.png]]
+![[screenshots/Splunk_Exploring_SPL_019.png]]
 
 Ans: 70
 
 # Task 8  Recap and Conclusion
+This wraps up the Splunk SPL room.
+
+We have covered various functions and commands used together to form search queries to look for the data more effectively. To practice more, look at the [](https://tryhackme.com/room/splunk201)following Splunk rooms and challenges.
+
+- [Incident handling with Splunk](https://tryhackme.com/room/splunk201)
+- [Investigating with Splunk](https://tryhackme.com/room/investigatingwithsplunk)
+- [Benign](https://tryhackme.com/room/benign)
+- [PS Eclipse](https://tryhackme.com/room/posheclipse)
