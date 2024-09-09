@@ -1,5 +1,4 @@
 # Task 1  Introduction
-
 Splunk is a powerful SIEM solution that provides the ability to search and explore machine data. **Search Processing Language (SPL)** is used to make the search more effective. It comprises various functions and commands used together to form complex yet effective search queries to get optimized results.
 
 This room will dive deep into some key fundamentals of searching capability, like chaining SPL queries to construct simple to complex queries.  
@@ -26,11 +25,11 @@ Before moving forward, deploy the machine. You can access this lab in the Attack
 **Note:** For this room, we will work on the index `Windowslogs`.
 
 What is the name of the host in the Data Summary tab?
-![[screenshots/Splunk_Exploring_SPL_001.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_001.png]]
 
-![[screenshots/Splunk_Exploring_SPL_002.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_002.png]]
 
-![[screenshots/Splunk_Exploring_SPL_003.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_003.png]]
 
 Ans:  cyber-host
 # Task 3  Search & Reporting App Overview
@@ -80,13 +79,13 @@ Answer the questions below
 
 In the search History, what is the 7th search query in the list? (excluding your searches from today)
 
-![[screenshots/Splunk_Exploring_SPL_004.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_004.png]]
 
 Ans: ```index=windowslogs | chart count(EventCode) by Image```
 
 In the left field panel, which Source IP has recorded max events?  
 
-![[screenshots/Splunk_Exploring_SPL_005.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_005.png]]
 
 Ans: 172.90.12.11
 
@@ -94,7 +93,7 @@ How many events are returned when we apply the time filter to display events on 
 
 Use the Date time range and change the parameter to between. Set the given date and time. 
 
-![[screenshots/Splunk_Exploring_SPL_006.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_006.png]]
 
 Ans: 134
 # Task 4  Splunk Processing Language Overview
@@ -165,7 +164,7 @@ How many Events are returned when searching for Event ID 1 **AND** User as *Ja
 index=windowslogs EventID=1 AND User=*James*
 ```
 
-![[screenshots/Splunk_Exploring_SPL_007.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_007.png]]
 
 Ans: 4
 
@@ -175,14 +174,14 @@ How many events are observed with Destination IP 172.18.39.6 AND destination Por
 index=windowslogs DestinationIp=172.18.39.6 AND DestinationPort="135"
 ```
 
-![[screenshots/Splunk_Exploring_SPL_008.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_008.png]]
 
 Ans: 4
 
 What is the Source IP with highest count returned with this Search query?  
 Search Query: index=windowslogs  Hostname="Salena.Adam" DestinationIp="172.18.38.5"  
 
-![[screenshots/Splunk_Exploring_SPL_009.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_009.png]]
 
 Ans: 172.90.12.11
 
@@ -192,13 +191,13 @@ In the index windowslogs, search for all the events that contain the term **cyb
 index=windowslogs cyber
 ```
 
-![[screenshots/Splunk_Exploring_SPL_010.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_010.png]]
 
 Ans: 0
 
 Now search for the term **cyber\***, how many events are returned?
 
-![[screenshots/Splunk_Exploring_SPL_011.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_011.png]]
 
 Ans: 12256
 
@@ -275,7 +274,7 @@ What is the third EventID returned against this search query?
 
 Search Query: `index=windowslogs | table _time EventID Hostname SourceName | reverse` 
 
-![[screenshots/Splunk_Exploring_SPL_012.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_012.png]]
 
 Ans: 4103
 
@@ -286,7 +285,7 @@ index=windowslogs | table _time EventID Hostname SourceName | dedup Hostname
 | reverse
 ```
 
-![[screenshots/Splunk_Exploring_SPL_013.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_013.png]]
 
 Ans: Salena.Adam
 
@@ -375,7 +374,7 @@ index=windowslogs | table _time EventID Hostname SourceName
 | reverse
 ```
 
-![[screenshots/Splunk_Exploring_SPL_014.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_014.png]]
 
 Ans: James.browne
 
@@ -386,7 +385,7 @@ index=windowslogs | table _time EventID Hostname SourceName
 |  tail
 ```
 
-![[screenshots/Splunk_Exploring_SPL_015.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_015.png]]
 
 Ans: 4103
 
@@ -397,7 +396,7 @@ index=windowslogs | table _time EventID Hostname SourceName
 | sort SourceName
 ```
 
-![[screenshots/Splunk_Exploring_SPL_016.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_016.png]]
 
 Ans: Microsoft-Windows-Directory-Services-SAM
 
@@ -512,7 +511,7 @@ index=windowslogs
 | top limit=8 Image
 ```
 
-![[screenshots/Splunk_Exploring_SPL_017.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_017.png]]
 
 Ans: 196
 
@@ -523,7 +522,7 @@ index=windowslogs
 | rare User
 ```
 
-![[screenshots/Splunk_Exploring_SPL_018.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_018.png]]
 
 Ans: James
 
@@ -534,7 +533,7 @@ index=windowslogs
 | chart count by Image
 ```
 
-![[screenshots/Splunk_Exploring_SPL_019.png]]
+![[../screenshots/Splunk Exploring SPL/Splunk_Exploring_SPL_019.png]]
 
 Ans: 70
 

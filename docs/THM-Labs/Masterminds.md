@@ -55,7 +55,7 @@ Answer is not in VirusTotal, both links have no comments in the community tab. I
 
 https://bazaar.abuse.ch/sample/a2d525c9bd8128160c64990fa84afc4da2bea8a72cfb4ca42f14cddac1343df2/
 
-![[screenshots/Masterminds_001.png]]
+![](../screenshots/Masterminds/Masterminds_001.png)
 ## Infection 2
 Please, navigate to the Infection2 packet capture in Brim to investigate the compromise event for the second machine.
 
@@ -67,7 +67,7 @@ Provide the IP address of the victim machine. 
 
 Use defined queries, Unique Network Connections
 
-![[screenshots/Masterminds_002.png]]
+![](../screenshots/Masterminds/Masterminds_002.png)
 
 In this image we can see that there's a lot of traffic coming from 192.168.75.146
 
@@ -77,7 +77,7 @@ Provide the IP address the victim made the POST connections to. 
 
 Using queries again, HTTP Post Requests, all of the POST requests are pointing to 5.181.156.252
 
-![[screenshots/Masterminds_003.png]]
+![](../screenshots/Masterminds/Masterminds_003.png)
 
 Ans: 5.181.156.252
 
@@ -93,7 +93,7 @@ Since we are looking for downloads, we can filter our GET
 
 `method=="GET" id.orig_h==192.168.75.146`
 
-![[screenshots/Masterminds_004.png]]
+![](../screenshots/Masterminds/Masterminds_004.png)
 
 Ans: hypercustom.top
 
@@ -109,13 +109,13 @@ There were 2 Suricata "A Network Trojan was detected" alerts. What were the sour
 
 User filter, Suricata Alerts by Category
 
-![[screenshots/Masterminds_005.png]]
+![](../screenshots/Masterminds/Masterminds_005.png)
 
 Ans: 192.168.75.146, 45.95.203.28
 
 Taking a look at .top domain in HTTP requests, provide the name of the stealer (Trojan that gathers information from a system) involved in this packet capture using [URLhaus Database](https://urlhaus.abuse.ch/). 
 
-![[screenshots/Masterminds_006.png]]
+![](../screenshots/Masterminds/Masterminds_006.png)
 
 Ans: Redline Stealer
 ## Infection 3
@@ -137,7 +137,7 @@ Provide three C2 domains from which the binaries were downloaded (starting from 
 
 Filter out GET method with the victim IP, then sort the timestamps or scroll to the end.
 
-![[screenshots/Masterminds_007.png]]
+![](../screenshots/Masterminds/Masterminds_007.png)
 
 Ans: efhoahegue.ru, afhoahegue.ru, xfhoahegue.ru
 
@@ -151,7 +151,7 @@ Use the Unique DNS Queries
 
 `_path=="dns" | count() by query | query=="efhoahegue.ru"`
 
-![[screenshots/Masterminds_008.png]]
+![](../screenshots/Masterminds/Masterminds_008.png)
 
 Ans: 2
 
@@ -161,7 +161,7 @@ Filter HTTP GET requests using the first domain IP, looking at the uri, only 5 e
 
 `_path=="http" | method=="GET" | 162.217.98.146`
 
-![[screenshots/Masterminds_009.png]]
+![](../screenshots/Masterminds/Masterminds_009.png)
 
 Ans: 5
 
@@ -177,7 +177,7 @@ Count all the dns requests
 
 `_path=="dns" | count()`
 
-![[screenshots/Masterminds_010.png]]
+![](../screenshots/Masterminds/Masterminds_010.png)
 
 Ans: 986
 

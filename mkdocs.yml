@@ -1,0 +1,14 @@
+site_name: Let's Play
+#site_url: https://mydomain.org/mysite
+theme:
+  name: material
+  font: 
+    text: Roboto
+  palette:
+    primary: black
+    accent: orange
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer

@@ -35,6 +35,7 @@ Ans: ET POLICY PE EXE or DLL Windows file download HTTP
 What was the IP to trigger either alert? Enter your answer in a **defanged** format. 
 
 Filter suricata logs by source and destination
+
 Ans: `185[.]118[.]164[.]8`
 
 Provide the full URI for the malicious downloaded file. In your answer, **defang** the URI. 
@@ -48,7 +49,8 @@ What is the name of the payload within the cab file? 
 Grab the file hash then upload to virustotal
 
 Ans: draw.dll
-![](screenshots/warzone2_screenshot_001.png)
+
+![](../screenshots/Warzone%202/warzone2_screenshot_001.png)
 
 What is the user-agent associated with this network traffic?
 

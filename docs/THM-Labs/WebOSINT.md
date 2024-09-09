@@ -41,32 +41,32 @@ What is the name of the company the domain was registered with?
 
 Ans: NAMECHEAP INC
 
-![](screenshots/webosint_screenshot_001.png)
+![](../screenshots/WebOSINT/webosint_screenshot_001.png)
 
 What phone number is listed for the registration company? (do not include country code or special characters/spaces)
 
 Ans: 6613102107
 
-![](screenshots/webosint_screenshot_002.png)
+![](../screenshots/WebOSINT/webosint_screenshot_002.png)
 
 What is the first nameserver listed for the site?
 
 Ans: NS1.BRAINYDNS.COM
 
-![](screenshots/webosint_screenshot_003.png)
+![](../screenshots/WebOSINT/webosint_screenshot_003.png)
 
 What is listed for the name of the registrant?
 
 Ans: Redacted for Privacy
 
-![](screenshots/webosint_screenshot_004.png)
+![](../screenshots/WebOSINT/webosint_screenshot_004.png)
 
 What country is listed for the registrant?
 
 Ans: Panama
 The current registrant is located in Iceland however it is not the answer, after looking up the question, the accepted answer is Panama. The question needs to be updated. 
 
-![](screenshots/webosint_screenshot_005.png)
+![](../screenshots/WebOSINT/webosint_screenshot_005.png)
 
 # Task 3  Ghosts of Websites Past
 
@@ -88,14 +88,14 @@ Find the first capture of the link. Open one article and the name should be ther
 
 Ans: Steve
 
-![](screenshots/webosint_screenshot_006.png)
+![](../screenshots/WebOSINT/webosint_screenshot_006.png)
 
 What city and country was the author writing from?
 
 On the same page, there are tags at the end of the article. Of the tags is gwangju which sounds like a place.
 
 
-![](screenshots/webosint_screenshot_007.png)
+![](../screenshots/WebOSINT/webosint_screenshot_007.png)
 
 Searching it on Google reveals the Gwangju is indeed a place on South Korea.
 
@@ -106,7 +106,7 @@ Other clues can be seen on the list of articles.
 - KDJ Convention Center
 
 
-![](screenshots/webosint_screenshot_008.png)
+![](../screenshots/WebOSINT/webosint_screenshot_008.png)
 Ans: Gwangju, South Korea
 
 [Research] What is the name (in English) of the temple inside the National Park the author frequently visits?
@@ -114,9 +114,9 @@ Ans: Gwangju, South Korea
 After skimming through he's articles, I found that he goes to Mudeungsan national park however, the name of the temple isn't in the article. Googling the park shows the name of the temple.
 
 
-![](screenshots/webosint_screenshot_009.png)
+![](../screenshots/WebOSINT/webosint_screenshot_009.png)
 
-![](screenshots/webosint_screenshot_010.png)
+![](../screenshots/WebOSINT/webosint_screenshot_010.png)
 # Task 4  Digging into DNS
 
 So far we've gathered some good info about the content that was on our target website, even though it hasn't been live for several years.
@@ -136,7 +136,7 @@ What was RepublicOfKoffee.com's IP address as of October 2016?
 Use the IP History tool
 
 
-![](screenshots/webosint_screenshot_011.png)
+![](../screenshots/WebOSINT/webosint_screenshot_011.png)
 
 Based on the other domains hosted on the same IP address, what kind of hosting service can we safely assume our target uses?
 
@@ -168,13 +168,13 @@ What is the second nameserver listed for the domain?
 
 Ans: NS2.HEAT.NET
 
-![](screenshots/webosint_screenshot_012.png)
+![](../screenshots/WebOSINT/webosint_screenshot_012.png)
 
 What IP address was the domain listed on as of December 2011?
 
 Ans: 72.52.192.240
 
-![](screenshots/webosint_screenshot_013.png)
+![](../screenshots/WebOSINT/webosint_screenshot_013.png)
 
 Based on domains that share the same IP, what kind of hosting service is the domain owner using?
 
@@ -182,31 +182,31 @@ Ans: Shared
 There were no domains at the time of answering, so basing off the clue, I answered shared.
 
 
-![](screenshots/webosint_screenshot_014.png)
+![](../screenshots/WebOSINT/webosint_screenshot_014.png)
 
 On what date did was the site first captured by the internet archive? (MM/DD/YY format)
 
 Ans: 06/01/97
 
-![](screenshots/webosint_screenshot_015.png)
+![](../screenshots/WebOSINT/webosint_screenshot_015.png)
 
 What is the first sentence of the first body paragraph from the final capture of 2001?
 
 Ans: After years of great online gaming, it’s time to say good-bye.
 
-![](screenshots/webosint_screenshot_016.png)
+![](../screenshots/WebOSINT/webosint_screenshot_016.png)
 
 Using your search engine skills, what was the name of the company that was responsible for the original version of the site? 
 
 Ans: Segasoft
 
-![](screenshots/webosint_screenshot_017.png)
+![](../screenshots/WebOSINT/webosint_screenshot_017.png)
 
 What does the first header on the site on the last capture of 2010 say?
 
 Ans: Heat.net – Heating and Cooling
 
-![](screenshots/webosint_screenshot_018.png)
+![](../screenshots/WebOSINT/webosint_screenshot_018.png)
 # Task 6  Taking A Peek Under The Hood Of A Website
 
 Isn't it kind of interesting how the website disappeared for a period of time and came back?
@@ -308,10 +308,10 @@ Use the tools in Task 4 to confirm the link between the two sites. Try hard to 
 
 For my initial move, I looked at the IP History of both web sites. 
 
-![](screenshots/webosint_screenshot_019.png)
+![](../screenshots/WebOSINT/webosint_screenshot_019.png)
 heat.net IP History
 
-![](screenshots/webosint_screenshot_020.png)
+![](../screenshots/WebOSINT/webosint_screenshot_020.png)
 purchase.org IP History
 
 Both used to be owned by LIQUIDWEB, however it does not match the given clue in the answer, and I wasn't sure where to look next. I tried using WHOIS but it didn't really help me. Looking at an online writeup apparently it is liquidweb but written differently. The correct answer is liquid web, l.l.c

@@ -111,7 +111,7 @@ INDEXED = true
 
 What is the full path of the FIXIT app directory?  
 
- ```
+```
 /opt/splunk/etc/apps/fixit
 ```
 
@@ -133,7 +133,7 @@ What regex pattern will help us define the Event's start?
 
 What is the captured domain?
 
-![](screenshots/Fixit_001.png)
+![](../screenshots/Fixit/Fixit_001.png)
 
 Ans: Cybertees.THM
 
@@ -147,23 +147,23 @@ I had to adjust my regex to capture one or two words and exclude at:
 ```
 .+named\s(\S+\s\S+).\w+\s(\w+)(\s\w+){4}\s([a-zA-Z0-9]+\.\w+\/(\w+\.\w+)?).+\s((\d{1,3}\.){3}\d{1,3}).+country\s+(\w+(\s\w+)?) at:
 ```
-![](screenshots/Fixit_002.png)
+![](../screenshots/Fixit/Fixit_002.png)
 
 How many departments are captured in the logs?  
 
-![](screenshots/Fixit_003.png)
+![](../screenshots/Fixit/Fixit_003.png)
 
 Ans: 6
 
 How many usernames are captured in the logs?
 
-![](screenshots/Fixit_004.png)
+![](../screenshots/Fixit/Fixit_004.png)
 
 Ans: 28
 
 How many source IPs are captured in the logs?
 
-![](screenshots/Fixit_005.png)
+![](../screenshots/Fixit/Fixit_005.png)
 
 Ans: 52
 
@@ -186,6 +186,6 @@ Which user accessed the secret-document.pdf on the website?
 index=main pdf
 ```
 
-![](screenshots/Fixit_006.png)
+![](../screenshots/Fixit/Fixit_006.png)
 
 Ans: Sarah Hall

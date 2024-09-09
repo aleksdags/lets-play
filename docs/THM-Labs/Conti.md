@@ -1,6 +1,6 @@
 An Exchange server was compromised with ransomware. Use Splunk to investigate how the attackers compromised the server.
 
-# Task 1: SITREP
+## Task 1: SITREP
 
 Some employees from your company reported that they can’t log into Outlook. The Exchange system admin also reported that he can’t log in to the Exchange Admin Center. After initial triage, they discovered some weird readme files settled on the Exchange server.  
 
@@ -32,7 +32,7 @@ Start the attached virtual machine.
 
  Completed
 
-# Task 2: Exchange Server Compromised
+## Task 2: Exchange Server Compromised
 Below are the error messages that the Exchange admin and employees see when they try to access anything related to Exchange or Outlook.  
 
 **Exchange Control Panel**:  
@@ -44,7 +44,7 @@ Below are the error messages that the Exchange admin and employees see when they
 
 **Task**: You are assigned to investigate this situation. Use Splunk to answer the questions below regarding the Conti ransomware. 
 
-Answer the questions below
+### Answer the questions below
 
 Can you identify the location of the ransomware?
 
@@ -52,15 +52,15 @@ Can you identify the location of the ransomware?
 index="main" source="WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=11
 ```
 
-![](screenshots/Conti_001.png)
+![](../screenshots/Conti/Conti_001.png)
 
-Ans: `c:\Users\Administrator\Documents\cmd.exe`
+Ans: `C:\Users\Administrator\Documents\cmd.exe`
 
 What is the Sysmon event ID for the related file creation event?  
 
 https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 
-![](screenshots/Conti_002.png)
+![](../screenshots/Conti/Conti_002.png)
 
 Ans: 11
 
@@ -70,13 +70,15 @@ Can you find the MD5 hash of the ransomware?
 index="main" source="WinEventLog:Microsoft-Windows-Sysmon/Operational" Image="C:\\Users\\Administrator\\Documents\\cmd.exe" Hashes="*"
 ```
 
+Ans: `290c7dfb01e50cea9e19da81a781af2c`
+
 What file was saved to multiple folder locations?
 
 ```
 index="main" source="WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=11 RuleName=Downloads
 ```
 
-![](screenshots/Conti_003.png)
+![](../screenshots/Conti/Conti_003.png)
 
 Ans: readme.txt
 
@@ -98,7 +100,7 @@ index="main" source="WinEventLog:Microsoft-Windows-Sysmon/Operational"
 
 Hint said to look at Event Code 8, there are only 2 entries here which I assumed when the attacker started and migrated.
 
-![](screenshots/Conti_004.png)
+![](../screenshots/Conti/Conti_004.png)
 
 Adding SourceImage in the selecting field shows us the answers.
 
@@ -112,7 +114,7 @@ lsass.exe is a windows process is used in security related tasks such as verifyi
 
 On the other hand, unsecapp.exe is used to execute WMI scipts.
 
-![](screenshots/Conti_005.png)
+![](../screenshots/Conti/Conti_005.png)
 
 Ans: `C:\Windows\System32\lsass.exe`
 
@@ -124,7 +126,7 @@ Move from sysmon logs to iis and searched for unfamiliar post requests in the cs
 index="main" sourcetype=iis cs_method=POST
 ```
 
-![](screenshots/Conti_006.png)
+![](../screenshots/Conti/Conti_006.png)
 
 Webshell deployed in IIS are in aspx
 
