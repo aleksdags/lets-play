@@ -1,4 +1,4 @@
-# Task 1 Introduction
+### Task 1 Introduction
 
 ![OWASP logo](https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/585aef878659bfbed7d6150703c6ba9d.png)  
   
@@ -16,8 +16,8 @@ This room breaks each OWASP topic down and includes details on the vulnerabili
 10. Server-Side Request Forgery (SSRF)
 
 The room has been designed for beginners and assumes no previous security knowledge.
-# Task 2  Accessing Machines
-# Task 3  1. Broken Access Control
+### Task 2  Accessing Machines
+### Task 3  1. Broken Access Control
 
 ![Access Controls](https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/3804b69c1b754f353733fac2ccd71d31.png)  
 
@@ -33,7 +33,7 @@ Simply put, broken access control allows attackers to bypass **authorisation**,
 
 For example, a [vulnerability was found in 2019](https://bugs.xdavidhu.me/google/2021/01/11/stealing-your-private-videos-one-frame-at-a-time/), where an attacker could get any single frame from a Youtube video marked as private. The researcher who found the vulnerability showed that he could ask for several frames and somewhat reconstruct the video. Since the expectation from a user when marking a video as private would be that nobody had access to it, this was indeed accepted as a broken access control vulnerability.
 
-# Task 4  Broken Access Control (IDOR Challenge)
+### Task 4  Broken Access Control (IDOR Challenge)
 
 Insecure Direct Object Reference
 
@@ -67,7 +67,7 @@ Logging into the server, we immediately look at the url. The note_id starts at 1
 
 flag : flag{fivefourthree}
 
-# Task 5  2. Cryptographic Failures
+### Task 5  2. Cryptographic Failures
 
 Cryptographic Failures
 
@@ -85,7 +85,7 @@ At more complex levels, taking advantage of some cryptographic failures often in
 
 The web application in this box contains one such vulnerability. To continue, read through the supporting material in the following tasks.
 
-# Task 6  Cryptographic Failures (Supporting Material 1)
+### Task 6  Cryptographic Failures (Supporting Material 1)
 The most common way to store a large amount of data in a format easily accessible from many locations is in a database. This is perfect for something like a web application, as many users may interact with the website at any time. Database engines usually follow the Structured Query Language (SQL) syntax.  
 
 In a production environment, it is common to see databases set up on dedicated servers running a database service such as MySQL or MariaDB; however, databases can also be stored as files. These are referred to as "flat-file" databases, as they are stored as a single file on the computer. This is much easier than setting up an entire database server and could potentially be seen in smaller web applications. Accessing a database server is outwith the scope of today's task, so let's focus instead on flat-file databases.
@@ -158,7 +158,7 @@ We have the custID (0), the custName (Joy Paulson), the creditCard (4916 9012 22
 
 In the next task, we'll look at cracking this hash.
 
-# Task 7  Cryptographic Failures (Supporting Material 2)
+### Task 7  Cryptographic Failures (Supporting Material 2)
 We saw how to query an SQLite database for sensitive data in the previous task. We found a collection of password hashes, one for each user. In this task, we will briefly cover how to crack these.
 
 When it comes to hash cracking, Kali comes pre-installed with various tools. If you know how to use these, then feel free to do so; however, they are outwith the scope of this material.
@@ -178,7 +178,7 @@ We see that the hash was successfully broken, and the user's password was "passw
 It's worth noting that Crackstation works using a massive wordlist. If the password is not in the wordlist, then Crackstation will not be able to break the hash.  
 
 The challenge is guided, so if Crackstation fails to break a hash in today's box, you can assume that the hash has been specifically designed not to be crackable.
-# Task 8  Cryptographic Failures (Challenge)
+### Task 8  Cryptographic Failures (Challenge)
 It's now time to put what you've learnt into practice! For this challenge, connect to the web application at .
 
 Answer the questions below
@@ -222,7 +222,7 @@ We can now use the admin account.
 
 Ans: THM{Yzc2YjdkMjE5N2VjMzNhOTE3NjdiMjdl}
 
-# Task 9  3. Injection
+### Task 9  3. Injection
 Injection
 
 Injection flaws are very common in applications today. These flaws occur because the application interprets user-controlled input as commands or parameters. Injection attacks depend on what technologies are used and how these technologies interpret the input. Some common examples include:
@@ -237,7 +237,7 @@ The main defence for preventing injection attacks is ensuring that user-controll
 
 Dangerous characters or input is classified as any input that can change how the underlying data is processed. Instead of manually constructing allow lists or stripping input, various libraries exist that can perform these actions for you.
 
-# Task 10  3.1. Command Injection
+### Task 10  3.1. Command Injection
 
 Command Injection
 
@@ -382,7 +382,7 @@ Run &(cat /etc/os-release), the machine uses version 3.16.0
 
 Ans: 3.16.0
 
-# Task 11  4. Insecure Design
+### Task 11  4. Insecure Design
 
 Insecure Design
 
@@ -421,7 +421,7 @@ Once we log in with the new password, there are 3 available tabs. I went to Priv
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_011.png)
 Ans: THM{Not_3ven_c4tz_c0uld_sav3_U!}
 
-# Task 12  5. Security Misconfiguration
+### Task 12  5. Security Misconfiguration
 
 Security Misconfiguration
 
@@ -476,7 +476,7 @@ import os; print(os.popen("cat app.py").read())
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_012.png)
 
 Ans: THM{Just_a_tiny_misconfiguration}
-# Task 13  6. Vulnerable and Outdated Components
+### Task 13  6. Vulnerable and Outdated Components
 Vulnerable and Outdated Components  
 
 Occasionally, you may find that the company/entity you're pen-testing is using a program with a well-known vulnerability.
@@ -484,7 +484,7 @@ Occasionally, you may find that the company/entity you're pen-testing is using a
 For example, let's say that a company hasn't updated their version of WordPress for a few years, and using a tool such as [WPScan](https://wpscan.com/wordpress-security-scanner), you find that it's version 4.6. Some quick research will reveal that WordPress 4.6 is vulnerable to an unauthenticated remote code execution(RCE) exploit, and even better, you can find an exploit already made on [Exploit-DB](https://www.exploit-db.com/exploits/41962).
 
 As you can see, this would be quite devastating because it requires very little work on the attacker's part. Since the vulnerability is already well known, someone else has likely made an exploit for the vulnerability already. The situation worsens when you realise that it's really easy for this to happen. If a company misses a single update for a program they use, it could be vulnerable to any number of attacks.
-# Task 14  Vulnerable and Outdated Components - Exploit
+### Task 14  Vulnerable and Outdated Components - Exploit
 
 Recall that since this is about known vulnerabilities, most of the work has already been done for us. Our main job is to find out the information of the software and research it until we can find an exploit. Let's go through that with an example web application.
 
@@ -564,7 +564,7 @@ Boom! We have RCE. Now it's important to note that most scripts will tell you w
 It is also worth noting that it may not always be this easy. Sometimes you will just be given a version number, like in this case, but other times you may need to dig through the HTML source or even take a lucky guess on an exploit script. But realistically, if it is a known vulnerability, there's probably a way to discover what version the application is running.  
 
 That's really it. The great thing about this piece of the OWASP Top 10 is that the work is already done for us, we just need to do some basic research, and as a penetration tester, you're already doing that quite a bit.
-# Task 15  Vulnerable and Outdated Components - Lab
+### Task 15  Vulnerable and Outdated Components - Lab
 
 Navigate to MACHINE_IP where you'll find a vulnerable application. All the information you need to exploit it can be found online.
 
@@ -589,7 +589,7 @@ What is the content of the /opt/flag.txt file?
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_016.png)
 Ans: THM{But_1ts_n0t_my_f4ult!}
 
-# Task 16  7. Identification and Authentication Failures
+### Task 16  7. Identification and Authentication Failures
 ![Authentication Failures](https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/1cadd89ea0ec694110f3539c9592a32f.png)  
   
 
@@ -607,7 +607,7 @@ There can be various mitigation for broken authentication mechanisms depending o
 - To avoid brute force attacks, ensure that the application enforces an automatic lockout after a certain number of attempts. This would prevent an attacker from launching more brute-force attacks.
 - Implement Multi-Factor Authentication. If a user has multiple authentication methods, for example, using a username and password and receiving a code on their mobile device, it would be difficult for an attacker to get both the password and the code to access the account.
 
-# Task 17  Identification and Authentication Failures Practical
+### Task 17  Identification and Authentication Failures Practical
 
 For this example, we'll look at a logic flaw within the authentication mechanism.
 
@@ -630,7 +630,7 @@ What is the flag that you found in arthur's account?
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_018.png)
 
 Ans: d9ac0f7db4fda460ac3edeb75d75e16e
-# Task 18  8. Software and Data Integrity Failures
+### Task 18  8. Software and Data Integrity Failures
 What is Integrity?  
 
 When talking about integrity, we refer to the capacity we have to ascertain that a piece of data remains unmodified. Integrity is essential in cybersecurity as we care about maintaining important data free from unwanted or malicious modifications. For example, say you are downloading the latest installer for an application. How can you be sure that while downloading it, it wasn't modified in transit or somehow got damaged by a transmission error?
@@ -664,7 +664,7 @@ This vulnerability arises from code or infrastructure that uses software or data
 
 - Software Integrity Failures
 - Data Integrity Failures
-# Task 19  Software Integrity Failures
+### Task 19  Software Integrity Failures
 Software Integrity Failures
 
 Suppose you have a website that uses third-party libraries that are stored in some external servers that are out of your control. While this may sound a bit strange, this is actually a somewhat common practice. Take as an example jQuery, a commonly used javascript library. If you want, you can include jQuery in your website directly from their servers without actually downloading it by including the following line in the HTML code of your website:
@@ -693,7 +693,7 @@ What is the SHA-256 hash of `https://code.jquery.com/jquery-1.12.4.min.js`?
 
 Ans: sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=
 
-# Task 20  Data Integrity Failures
+### Task 20  Data Integrity Failures
 Data Integrity Failures
 
 Let's think of how web applications maintain sessions. Usually, when a user logs into an application, they will be assigned some sort of session token that will need to be saved on the browser for as long as the session lasts. This token will be repeated on each subsequent request so that the web application knows who we are. These session tokens can come in many forms but are usually assigned via cookies. **Cookies** are key-value pairs that a web application will store on the user's browser and that will be automatically repeated on each request to the website that issued them.  
@@ -778,7 +778,7 @@ What is the flag presented to the admin user?
 
 Ans: THM{Dont_take_cookies_from_strangers}
 
-# Task 21  9. Security Logging and Monitoring Failures
+### Task 21  9. Security Logging and Monitoring Failures
 When web applications are set up, every action performed by the user should be logged. Logging is important because, in the event of an incident, the attackers' activities can be traced. Once their actions are traced, their risk and impact can be determined. Without logging, there would be no way to tell what actions were performed by an attacker if they gain access to particular web applications. The more significant impacts of these include:
 
 - **Regulatory damage:** if an attacker has gained access to personally identifiable user information and there is no record of this, final users are affected, and the application owners may be subject to fines or more severe actions depending on regulations.
@@ -812,7 +812,7 @@ Ans: `49.99.13.16`
 What kind of attack is being carried out?  
 
 Ans: Brute Force
-# Task 22  10. Server-Side Request Forgery (SSRF)
+### Task 22  10. Server-Side Request Forgery (SSRF)
 Server-Side Request Forgery
 
 This type of vulnerability occurs when an attacker can coerce a web application into sending requests on their behalf to arbitrary destinations while having control of the contents of the request itself. SSRF vulnerabilities often arise from implementations where our web application needs to use third-party services.

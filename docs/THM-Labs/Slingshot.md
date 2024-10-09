@@ -1,4 +1,4 @@
-# Task 1  Scenario
+### Task 1  Scenario
 
 Slingway Inc., a leading toy company, has recently noticed suspicious activity on its e-commerce web server and potential modifications to its database. To investigate the suspicious activity, they've hired you as a SOC Analyst to look into the web server logs and uncover any instances of malicious activity.
 
@@ -10,7 +10,7 @@ By investigating and answering the questions below, we can create a timeline of 
 - What user accounts were compromised?
 - What data was exfiltrated from the server?
 
-Answer the questions below
+#### Answer the questions below
 
 What was the attacker's IP?
 
