@@ -65,15 +65,22 @@ chown $(whoami):$(whoami) <ssh_key>
 ```
 tar -czf name-of-archive.tar.gz /path/to/directory-or-file
 ```
-- -c: Create an archive.
-- -z: Compress the archive with gzip.
-- -f: Allows you to specify the filename of the archive.
+-c: Create an archive.
+
+-z: Compress the archive with gzip.
+
+-f: Allows you to specify the filename of the archive.
 
 ## Transferring data from OCI to WSL and vice versa with Rsync
 From OCI to WSL
 ```
 rsync -avz --progress --stats -e "ssh -i <ssh_key>" user@<ipadd>:<path_to_file> <dst_directory>
 ```
+-a: Archive
+
+-v: Verbose mode
+
+-z: Compress files during transfer
 
 From WSL to OCI
 ```
