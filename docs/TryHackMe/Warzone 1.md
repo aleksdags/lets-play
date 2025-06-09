@@ -14,7 +14,7 @@ Deploy the machine attached to this task; it will be visible in the split-scree
 
 If you don't see a virtual machine load then click the Show Split View button.
 
-![Split View](https://assets.tryhackme.com/additional/challs/warzone1-split-view.png)  
+<!--![Split View](https://assets.tryhackme.com/additional/challs/warzone1-split-view.png) -->  
 
 #### Answer the questions below
 

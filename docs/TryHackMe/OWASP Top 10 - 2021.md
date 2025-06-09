@@ -587,6 +587,7 @@ python3 47887.py http://MACHINE_IP
 What is the content of the /opt/flag.txt file?
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_016.png)
+
 Ans: THM{But_1ts_n0t_my_f4ult!}
 
 ### Task 16  7. Identification and Authentication Failures

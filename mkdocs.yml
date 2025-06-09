@@ -1,14 +1,63 @@
 site_name: Let's Play
 #site_url: https://mydomain.org/mysite
+
+# Configurations
+
 theme:
   name: material
   font: 
     text: Roboto
   palette:
+    scheme: slate
     primary: black
     accent: orange
   features:
+    # Navigation
+    - navigation.tabs
     - navigation.sections
-    - navigation.expand
+    - navigation.indexes
     - navigation.top
-    - navigation.footer
+    - navigation.prune
+    #- navigation.path - INSIDER ONLY
+
+    # Code Blocks
+    - content.code.copy
+
+# Extensions
+
+markdown_extensions:
+  - pymdownx.details
+  - pymdownx.superfences
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# Page Tree
+
+nav:
+  - Home: index.md
+  - Playground:
+    - Playground/index.md
+    - Modded Minecraft:
+      - Getting Started: Playground/Modded Minecraft/Modded MC Server with OCI.md
+      - Updating modpack: Playground/Modded Minecraft/Updating Servers.md
+      - Script: Playground/Modded Minecraft/Shell script to update directories.md
+  - TryHackMe:
+    - TryHackMe/index.md
+    - Carnage: TryHackMe/Carnage.md
+    - Conti: TryHackMe/Conti.md
+    - Fixit: TryHackMe/Fixit.md
+    - Investigating Windows: TryHackMe/Investigating Windows.md
+    - Masterminds: TryHackMe/Masterminds.md
+    - OWASP Top 10 - 2021: TryHackMe/OWASP Top 10 - 2021.md
+    - Slingshot: TryHackMe/Slingshot.md
+    - Splunk Exploring SPL: TryHackMe/Splunk Exploring SPL.md
+    - Warzone 1: TryHackMe/Warzone 1.md
+    - Warzone 2: TryHackMe/Warzone 2.md
+    - WebOSINT: TryHackMe/WebOSINT.md
+  - Extras:
+    - Extras/index.md
+    - Massgrave IDM: Extras/Events.md

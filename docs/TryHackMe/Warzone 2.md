@@ -12,11 +12,11 @@ Your tools:
 
 ---
 
-Deploy the machine attached to this task; it will be visible in the split-screen view once it is ready.
+<!--Deploy the machine attached to this task; it will be visible in the split-screen view once it is ready.
 
 If you don't see a virtual machine load then click the Show Split View button.
 
-![Show Split Screen if needed](https://assets.tryhackme.com/additional/challs/warzone2-split-view.png)  
+![Show Split Screen if needed](https://assets.tryhackme.com/additional/challs/warzone2-split-view.png)  -->
 
 #### Answer the questions below
 

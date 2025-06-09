@@ -1,4 +1,4 @@
-![](https://assets.tryhackme.com/additional/carnage/carnage.png)  
+<!-- ![](https://assets.tryhackme.com/additional/carnage/carnage.png) -->
 
 Eric Fischer from the Purchasing Department at Bartell Ltd has received an email from a known contact with a Word document attachment.  Upon opening the document, he accidentally clicked on "Enable Content."  The SOC Department immediately received an alert from the endpoint agent that Eric's workstation was making suspicious connections outbound. The pcap was retrieved from the network sensor and handed to you for analysis. 
 
@@ -10,17 +10,17 @@ NOTE: DO NOT directly interact with any domains and IP addresses in this challe
 
 ---
 
-Deploy the machine attached to this task; it will be visible in the split-screen view once it is ready.
+<!--Deploy the machine attached to this task; it will be visible in the split-screen view once it is ready.
 
 If you don't see a virtual machine load, then click the Show Split View button.
 
 ![](https://assets.tryhackme.com/additional/carnage/split-view2.png)
 
-![](https://assets.tryhackme.com/additional/carnage/magnifier.png)  
+![](https://assets.tryhackme.com/additional/carnage/magnifier.png) 
 
 Are you ready for the journey?
 
-Please, load the pcap file in your Analysis folder on the Desktop into Wireshark to answer the questions below.
+Please, load the pcap file in your Analysis folder on the Desktop into Wireshark to answer the questions below. -->
 
 #### Answer the questions below
 What was the date and time for the first HTTP connection to the malicious IP?

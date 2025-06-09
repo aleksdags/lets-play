@@ -1,6 +1,6 @@
 Conducting basic open source intelligence research on a website
-# Task 1  When A Website Does Not Exist
 
+## Task 1  When A Website Does Not Exist
 What's the first thing you do when you are given the name of a business to check out? Fire up the ol' web browser, find the website and check it out, right?  
 
 What if the website, or even the entire business, no longer exists?
@@ -19,7 +19,7 @@ One way to collect information about a website without directly visiting it is t
 
 Go ahead and google "RepublicOfKoffee.com" with and without quote marks, just to see what happens.
 
-# Task 2  Whois Registration
+## Task 2  Whois Registration
 
 Just because nothing shows up when you visit 'RepublicOfKoffee.com,' doesn't mean that someone doesn't own the domain. In fact, if there is any kind of landing page at all, even a spammy one, then you can be sure that someone does, in fact, own it. But is it currently owned by the same person that used it for the time period we are interested in? We may or may not be able to figure that out, but it's worth a look.
 

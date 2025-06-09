@@ -1,4 +1,4 @@
-![](https://i.ibb.co/T1tPZdn/Depositphotos-174220344-s-2019.jpg)  
+<!--![](https://i.ibb.co/T1tPZdn/Depositphotos-174220344-s-2019.jpg)  -->
 
 Three machines in the Finance department at Pfeffer PLC were compromised. We suspect the initial source of the compromise happened through a phishing attempt and by an infected USB drive. The Incident Response team managed to pull the network traffic logs from the endpoints. Use Brim to investigate the network traffic for any indicators of an attack and determine who stands behind the attacks. 
 
@@ -6,11 +6,11 @@ Three machines in the Finance department at Pfeffer PLC were compromised. We sus
 
 ---
 
-Deploy the machine attached to this task; it will be visible in the **split-screen** view once it is ready.
+<!--Deploy the machine attached to this task; it will be visible in the **split-screen** view once it is ready.
 
 If you don't see a virtual machine load then click the **Show Split View** button.
 
-![](https://assets.tryhackme.com/additional/brimchallenge/brim-split-view.png)
+![](https://assets.tryhackme.com/additional/brimchallenge/brim-split-view.png)-->
 
 ## Infection 1
 Start by loading the Infection1 packet capture in Brim to investigate the compromise event for the first machine. All the PCAPs can be found here: `/home/ubuntu/Desktop/PCAPs`  

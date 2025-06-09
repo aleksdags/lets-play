@@ -26,11 +26,11 @@ Splunk Interface Credentials:
 
 Special thanks to [Bohan Zhang](https://www.linkedin.com/in/bohansec?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAACFkYBwB9L43-CozJsTYeFoIV29KBlKU9qc&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BWgzBOFb8RQWd%2B24UFVSw%2Fw%3D%3D) for this challenge.
 
-Answer the questions below
+<!--Answer the questions below
 
 Start the attached virtual machine.
 
- Completed
+Completed -->
 
 ## Task 2: Exchange Server Compromised
 Below are the error messages that the Exchange admin and employees see when they try to access anything related to Exchange or Outlook.  

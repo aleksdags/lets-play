@@ -1,12 +1,18 @@
 # Modded Minecraft Server with OCI
 
+!!! warning
+
+ 	Modpack used here is RLCraft Dregora, setup may be different to other packs
+
 ## Get an OCI Instance
 - Get an instance, use the official [oracle guide](https://blogs.oracle.com/developers/post/how-to-set-up-and-run-a-really-powerful-free-minecraft-server-in-the-cloud#create-a-virtual-machine-instance) 
-	- *Always free VMs are hard to get you can use this [script](https://github.com/gardinbe/oracle-compute-instance-creation-script/tree/master)to automate the clicking.*
+	- *Always free VMs are hard to get you can use this [script](https://github.com/gardinbe/oracle-compute-instance-creation-script/tree/master) to automate the clicking.*
+		- Low chance that you'll be able to get an instance with this method.
 	- *Also if your account is new, use the trial credits and create a paid VM while you try to get an ARM VM*
 		- What happens when you finally get the always free VM or when the trial is about to end?
 			- You can detach the current volume before deleting the paid VM to keep your server data. 
 			- **Note: Use another Linux ARM instance as you cannot reattach the boot volume of your x86 instance**
+	- Easiest way to get an instance is to upgrade your account to pay-as-you-go and stick to the limits of the always free tier to avoid getting charged.
 ## Setting up the VM
 - Get Java that supports your modpack
 	- ```sudo apt install openjdk-#-jdk```
@@ -16,11 +22,11 @@
 - Open the forge .jar to install server
 	- ```java -jar <forge-installer.jar> --installServer```
 - Move the generated files to desired modpack
-- Download modpack server pack then extract the zip after
+- Download modpack server zip then extract after
 - Create a script that will hold the server arguments
 	- Use this [script generator](https://docs.papermc.io/misc/tools/start-script-gen) for your start script
 	- `nano <script.sh>`
-- Make the .sh script an executable
+- Ensure that the .sh script is an executable
 	- ```chmod +x <script.sh>```
 - Configure your firewall
 	- Refer to the oracle official guide to manage OCI firewall
@@ -55,7 +61,7 @@ chmod 600 <ssh_key>
 chown $(whoami):$(whoami) <ssh_key>
 ```
 
-Using tar to create the archive
+## Using tar to create the archive
 ```
 tar -czf name-of-archive.tar.gz /path/to/directory-or-file
 ```
@@ -63,12 +69,13 @@ tar -czf name-of-archive.tar.gz /path/to/directory-or-file
 - -z: Compress the archive with gzip.
 - -f: Allows you to specify the filename of the archive.
 
-Use rsync to transfer from OCI to WSL
+## Transferring data from OCI to WSL and vice versa with Rsync
+From OCI to WSL
 ```
 rsync -avz --progress --stats -e "ssh -i <ssh_key>" user@<ipadd>:<path_to_file> <dst_directory>
 ```
 
-Use rsync to transfer from WSL to OCI
+From WSL to OCI
 ```
 rsync -avz --progress --stats -e <transfer_file> "ssh -i <ssh_key>" user@<ipadd>:<path_to_file> 
 ```
