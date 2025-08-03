@@ -1,15 +1,13 @@
 !!! warning "Backup your server data"
 
-	Remember to backup your server before updating to prevent loss of data. This would depend on the modpack that you're using as each has their own directory structure. Usually these files would be the `world save`, `modified configs`, and the `run script`
+	Remember to backup your server before updating to prevent loss of data. This would depend on the modpack that you're using as each has their own directory structure.
 
 ## Which files do you need to copy?
 - World save
-	- Rlcraft Dregora - ./DregoraRL
-	- ATM10 - ./world
 - local
 - server.properties
-- your run script - make sure to also update the mod loader if updated
-- eula.txt - so you dont have to rerun again
+- your run script
+- eula.txt
 - configs that you've modified
 ## Download the latest server files
 - Extract the server files to a new directory

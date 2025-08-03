@@ -46,7 +46,7 @@ nav:
       - Updating modpack: Playground/Modded Minecraft/Updating Servers.md
       #- Script: Playground/Modded Minecraft/Shell script to update directories.md
   - TryHackMe:
-    - TryHackMe/index.md
+    - TryHackMe: TryHackMe/index.md
     - Carnage: TryHackMe/Carnage.md
     - Conti: TryHackMe/Conti.md
     - Fixit: TryHackMe/Fixit.md

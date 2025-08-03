@@ -32,7 +32,7 @@ packet 1735 then check the frame tab for the date
 
 ![](../screenshots/Carnage/Carnage_001.png)
 
-Ans: 2021-09-24 16:44:06
+Answer: 2021-09-24 16:44:06
 
 What is the name of the zip file that was downloaded?  
 
@@ -40,7 +40,7 @@ Answer can be seen under the info column
 
 ![](../screenshots/Carnage/Carnage_002.png)
 
-Ans: documents.zip
+Answer: documents.zip
 
 What was the domain hosting the malicious zip file?  
 
@@ -52,7 +52,7 @@ another way to get this one is to follow the http stream
 
 ![](../screenshots/Carnage/Carnage_004.png)
 
-Ans: attirenepal.com
+Answer: attirenepal.com
 
 Without downloading the file, what is the name of the file in the zip file?  
 
@@ -62,7 +62,7 @@ Follow the http stream, you can see and .xls file in the start and end of the da
 
 ![](../screenshots/Carnage/Carnage_006.png)
 
-Ans: chart-1530076591.xls
+Answer: chart-1530076591.xls
 
 What is the name of the webserver of the malicious IP from which the zip file was downloaded?  
 
@@ -70,7 +70,7 @@ In packet 2173 under the http section, there is a server listed
 
 ![](../screenshots/Carnage/Carnage_007.png)
 
-Ans: LiteSpeed
+Answer: LiteSpeed
 
 What is the version of the webserver from the previous question?  
 
@@ -78,7 +78,7 @@ Answer is under x-powered-by
 
 ![](../screenshots/Carnage/Carnage_008.png)
 
-Ans: PHP/7.2.34
+Answer: PHP/7.2.34
 
 Malicious files were downloaded to the victim host from multiple domains. What were the three domains involved with this activity?
 
@@ -98,7 +98,7 @@ then follow the tcp stream, find CLIENT HELLO in the info column
 
 tcp.stream eq 90, tcp.stream eq 97 and tcp.stream eq 98
 
-Ans: finejewels.com.au, thietbiagt.com, new.americold.com
+Answer: finejewels.com.au, thietbiagt.com, new.americold.com
 
 Which certificate authority issued the SSL certificate to the first domain from the previous question?  
 
@@ -106,7 +106,7 @@ Return to the stream of the first url, stream 90
 
 ![](../screenshots/Carnage/Carnage_012.png)
 
-Ans: GoDaddy
+Answer: GoDaddy
 
 What are the two IP addresses of the Cobalt Strike servers? Use VirusTotal (the Community tab) to confirm if IPs are identified as Cobalt Strike C2 servers. (answer format: enter the IP addresses in sequential order)
 
@@ -124,7 +124,7 @@ Cobalt Strike uses ports 80 and 8080, so look for IPs that used these port
 
 ![](../screenshots/Carnage/Carnage_014.png)
 
-Ans: 185.106.96.158, 185.125.204.174
+Answer: 185.106.96.158, 185.125.204.174
 
 What is the Host header for the first Cobalt Strike IP address from the previous question?  
 
@@ -132,7 +132,7 @@ Filter ip.src == 185.106.96.158 then follow the stream
 
 ![](../screenshots/Carnage/Carnage_015.png)
 
-Ans: ocsp.verisign.com
+Answer: ocsp.verisign.com
 
 What is the domain name for the first IP address of the Cobalt Strike server? You may use VirusTotal to confirm if it's the Cobalt Strike server (check the Community tab).
 
@@ -144,7 +144,7 @@ From the same filter as the previous question, we can see survmeter.live, we can
 
 ![](../screenshots/Carnage/Carnage_018.png)
 
-Ans: survmeter.live
+Answer: survmeter.live
 
 What is the domain name of the second Cobalt Strike server IP?  You may use VirusTotal to confirm if it's the Cobalt Strike server (check the Community tab).
 
@@ -164,25 +164,25 @@ Hint: Filter Post HTTP traffic
 
 ![](../screenshots/Carnage/Carnage_022.png)
 
-Ans: maldivehost.net
+Answer: maldivehost.net
 
 What are the first eleven characters that the victim host sends out to the malicious domain involved in the post-infection traffic? 
 
 ![](../screenshots/Carnage/Carnage_023.png)
 
-Ans: zLIisQRWZI9
+Answer: zLIisQRWZI9
 
 What was the length for the first packet sent out to the C2 server?
 
 ![](../screenshots/Carnage/Carnage_024.png)
 
-Ans: 281
+Answer: 281
 
 What was the Server header for the malicious domain from the previous question?
 
 ![](../screenshots/Carnage/Carnage_025.png)
 
-Ans: Apache/2.4.49 (cPanel) OpenSSL/1.1.1l mod_bwlimited/1.4
+Answer: Apache/2.4.49 (cPanel) OpenSSL/1.1.1l mod_bwlimited/1.4
 
 The malware used an API to check for the IP address of the victim’s machine. What was the date and time when the DNS query for the IP check domain occurred? (**answer format**: yyyy-mm-dd hh:mm:ss UTC)
 
@@ -192,11 +192,11 @@ I filtered dns but didn't know how to proceed, so I had to look up the same guid
 
 This is the first api result
 
-Ans: 2021-09-24 17:00:04 UTC
+Answer: 2021-09-24 17:00:04 UTC
 
 What was the domain in the DNS query from the previous question?
 
-Ans: api.ipify.org
+Answer: api.ipify.org
 
 Looks like there was some malicious spam (malspam) activity going on. What was the first MAIL FROM address observed in the traffic?
 
@@ -204,7 +204,7 @@ Filter smtp, there is a message there saying that SMTP service is disabled, this
 
 ![](../screenshots/Carnage/Carnage_027.png)
 
-Ans: farshin@mailfa.com
+Answer: farshin@mailfa.com
 
 How many packets were observed for the SMTP traffic?
 
@@ -213,4 +213,4 @@ Filter smtp
 
 ![](../screenshots/Carnage/Carnage_028.png)
 
-Ans: 1439
+Answer: 1439

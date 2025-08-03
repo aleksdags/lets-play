@@ -10,7 +10,11 @@ John Doe - IT Systems Professional
 
 I'm an aspiring IT Administrator and Systems Engineer with hands-on experience in system security, network configuration, and cloud infrastructure. This portfolio showcases my technical projects, skills, and continuous learning journey in information technology.
 
-Let's play, an ode to youtube and twitch lets play content where you don't really elaborate on getting the best possible gameplay but more on how you tackle
+<!--
+Let's play, an ode to youtube and twitch lets play content, you're not really there for a tutorial 
+
+ where you don't really elaborate on getting the best possible gameplay but more on how you tackle
+-->
 
 ---
 💻 Technical Skills
@@ -27,7 +31,36 @@ Let's play, an ode to youtube and twitch lets play content where you don't reall
 🚀 Featured Projects
 
 <div class="grid cards" markdown>
--   __Security Lab Exercises__
+
+-   :material-home-circle: __Homelab__
+    
+    ---
+
+    Designed and implemented a modded Minecraft server using Oracle Cloud Infrastructure:
+
+    - Created detailed setup documentation and troubleshooting guides
+
+    - Optimized server performance in a cloud environment
+
+    - Configured network security and access rules
+
+    [View Playground :material-arrow-right:](./Playground/index.md)
+
+-   :material-cloud: __Cloud Infrastructure Deployment__
+    
+    ---
+
+    Designed and implemented a modded Minecraft server using Oracle Cloud Infrastructure:
+
+    - Created detailed setup documentation and troubleshooting guides
+
+    - Optimized server performance in a cloud environment
+
+    - Configured network security and access rules
+
+    [View OCI Minecraft Guide :material-arrow-right:](./Playground/Modded%20Minecraft/Modded%20MC%20Server%20with%20OCI.md)
+
+-   :material-security: __Security Lab Exercises__
 
     ---
 
@@ -39,35 +72,7 @@ Let's play, an ode to youtube and twitch lets play content where you don't reall
 
     - Network security analysis
 
-    [View Security Labs →](./TryHackMe/Carnage.md)
-
--   __Cloud Infrastructure Deployment__
-    
-    ---
-
-    Designed and implemented a modded Minecraft server using Oracle Cloud Infrastructure:
-
-    - Created detailed setup documentation and troubleshooting guides
-
-    - Optimized server performance in a cloud environment
-
-    - Configured network security and access rules
-
-    [View OCI Minecraft Guide →](./Playground/Modded%20Minecraft/Modded%20MC%20Server%20with%20OCI.md)
-
--   __Homelab__
-    
-    ---
-
-    Designed and implemented a modded Minecraft server using Oracle Cloud Infrastructure:
-
-    - Created detailed setup documentation and troubleshooting guides
-
-    - Optimized server performance in a cloud environment
-
-    - Configured network security and access rules
-
-    [View OCI Minecraft Guide →](./Playground/index.md)
+    [View Security Labs :material-arrow-right:](./TryHackMe/Carnage.md)
 
 </div>
 
@@ -107,11 +112,11 @@ I'm constantly expanding my knowledge through:
 
 I'm actively seeking entry-level opportunities in IT Administration and Systems Engineering roles.
 
-Email: your.email@example.com
+:material-email: : your.email@example.com
 
-LinkedIn: linkedin.com/in/yourprofile
+:material-linkedin: : linkedin.com/in/yourprofile
 
-GitHub: github.com/yourusername
+:material-github: : github.com/yourusername
 
 
 Feel free to reach out to discuss how my skills align with your organization's needs.

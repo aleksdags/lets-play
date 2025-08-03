@@ -8,7 +8,7 @@
 - Get an instance, use the official [oracle guide](https://blogs.oracle.com/developers/post/how-to-set-up-and-run-a-really-powerful-free-minecraft-server-in-the-cloud#create-a-virtual-machine-instance) 
 	- *Always free VMs are hard to get you can use this [script](https://github.com/gardinbe/oracle-compute-instance-creation-script/tree/master) to automate the clicking.*
 		- Low chance that you'll be able to get an instance with this method.
-	- *Also if your account is new, use the trial credits and create a paid VM while you try to get an ARM VM*
+	- *If your account is new, use the trial credits and create a paid VM while you try to get an ARM VM*
 		- What happens when you finally get the always free VM or when the trial is about to end?
 			- You can detach the current volume before deleting the paid VM to keep your server data. 
 			- **Note: Use another Linux ARM instance as you cannot reattach the boot volume of your x86 instance**
@@ -40,7 +40,7 @@
 - Start the server
 	- I used **tmux** for running the server to separate the instance and allow me to use the VM for other things.
 		- `tmux new -s <session_name>`
-	- This also makes it so that when you exit your SSH session, the server will continue to run 
+	- This makes it so that when you exit your SSH session, the server will continue to run 
 		- `ctrl+b d` to exit tmux instance
 		- `tmux a -t <session_name>` to rejoin tmux instance
 	- Run the script ```./<script.sh>```

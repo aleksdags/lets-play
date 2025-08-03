@@ -117,7 +117,7 @@ What is the full path of the FIXIT app directory?
 
 What Stanza will we use to define Event Boundary in this multi-line Event case?
 
-Ans: BREAK_ONLY_AFTER
+Answer: BREAK_ONLY_AFTER
 
 In the inputs.conf, what is the full path of the network-logs script?  
 
@@ -135,11 +135,11 @@ What is the captured domain?
 
 ![](../screenshots/Fixit/Fixit_001.png)
 
-Ans: Cybertees.THM
+Answer: Cybertees.THM
 
 How many countries are captured in the logs?
 
-Ans: 12
+Answer: 12
 
 I modified my regex to consider countries with two words. I was waiting for a while as I was stuck on 11 then I noticed that there were entries for United Kingdom, United States, and South Africa but would show as United and South.
 
@@ -153,23 +153,23 @@ How many departments are captured in the logs?
 
 ![](../screenshots/Fixit/Fixit_003.png)
 
-Ans: 6
+Answer: 6
 
 How many usernames are captured in the logs?
 
 ![](../screenshots/Fixit/Fixit_004.png)
 
-Ans: 28
+Answer: 28
 
 How many source IPs are captured in the logs?
 
 ![](../screenshots/Fixit/Fixit_005.png)
 
-Ans: 52
+Answer: 52
 
 Which configuration files were used to fix our problem? [Alphabetic order: File1, file2, file3]  
 
-Ans: fields.conf, props.conf, transforms.conf
+Answer: fields.conf, props.conf, transforms.conf
 
 What are the TOP two countries the user Robert tried to access the domain from? [Answer in comma-separated and in Alphabetic Order][Format: Country1, Country2]  
 
@@ -178,7 +178,7 @@ index=main  Username="Robert Wilson"
 | stats count by Country
 ```
 
-Ans: Canada, United States
+Answer: Canada, United States
 
 Which user accessed the secret-document.pdf on the website?
 
@@ -188,4 +188,4 @@ index=main pdf
 
 ![](../screenshots/Fixit/Fixit_006.png)
 
-Ans: Sarah Hall
+Answer: Sarah Hall

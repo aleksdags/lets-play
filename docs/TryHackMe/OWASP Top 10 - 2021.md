@@ -191,13 +191,13 @@ Using the inspector, we check the pages for notes.
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_004.png)
 
-Ans: /assets
+Answer: /assets
 
 Navigate to the directory you found in question one. What file stands out as being likely to contain sensitive data?  
 
 There is a .db file that is likely to contain information about the server and the users.
 
-Ans: webapp.db
+Answer: webapp.db
 
 Use the supporting material to access the sensitive data. What is the password hash of the admin user?  
 
@@ -205,14 +205,14 @@ Get the webapp.db and open it. Go to Browse Data and change the table to users, 
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_005.png)
 
-Ans: 6eea9b7ef19179a06954edd0f6c05ceb
+Answer: 6eea9b7ef19179a06954edd0f6c05ceb
 
 Crack the hash.  
 What is the admin's plaintext password?  
 
 Using crackstation, we can see that the developers used md5 and the cracked password is qwertyuiop 
 
-Ans: qwertyuiop
+Answer: qwertyuiop
 
 Log in as the admin. What is the flag?
 
@@ -220,7 +220,7 @@ We can now use the admin account.
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_006.png)
 
-Ans: THM{Yzc2YjdkMjE5N2VjMzNhOTE3NjdiMjdl}
+Answer: THM{Yzc2YjdkMjE5N2VjMzNhOTE3NjdiMjdl}
 
 ### Task 9  3. Injection
 Injection
@@ -303,7 +303,7 @@ Entering $(ls) we see drpepper.txt
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_007.png)
 
-Ans: drpepper.txt
+Answer: drpepper.txt
 
 How many non-root/non-service/non-daemon users are there?  
 
@@ -358,7 +358,7 @@ Enter $(cat /etc/passwd), there are no non-root/non-service/non-daemon users in 
  ----------------------------------------- 
 ```
 
-Ans: 0
+Answer: 0
 
 What user is this app running as?  
 
@@ -366,13 +366,13 @@ Enter $(whoami) to see the user
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_008.png)
 
-Ans: apache
+Answer: apache
 
 What is the user's shell set as?  
 
 Not familiar with this one. I searched for the command needed, since we enumerated all the users and services earlier. Found apache at the end and the shell is set to nologin
 
-Ans: /sbin/nologin
+Answer: /sbin/nologin
 
 What version of Alpine Linux is running?  
 
@@ -380,7 +380,7 @@ Run &(cat /etc/os-release), the machine uses version 3.16.0
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_009.png)
 
-Ans: 3.16.0
+Answer: 3.16.0
 
 ### Task 11  4. Insecure Design
 
@@ -419,7 +419,7 @@ What is the value of the flag in joseph's account?
 Once we log in with the new password, there are 3 available tabs. I went to Private and the flag is there.
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_011.png)
-Ans: THM{Not_3ven_c4tz_c0uld_sav3_U!}
+Answer: THM{Not_3ven_c4tz_c0uld_sav3_U!}
 
 ### Task 12  5. Security Misconfiguration
 
@@ -465,7 +465,7 @@ import os; print(os.popen("ls -l").read())
 
 What is the database file name (the one with the .db extension) in the current directory?
 
-Ans: todo.db
+Answer: todo.db
 
 Modify the code to read the contents of the `app.py` file, which contains the application's source code. What is the value of the `secret_flag` variable in the source code?
 
@@ -475,7 +475,7 @@ import os; print(os.popen("cat app.py").read())
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_012.png)
 
-Ans: THM{Just_a_tiny_misconfiguration}
+Answer: THM{Just_a_tiny_misconfiguration}
 ### Task 13  6. Vulnerable and Outdated Components
 Vulnerable and Outdated Components  
 
@@ -588,7 +588,7 @@ What is the content of the /opt/flag.txt file?
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_016.png)
 
-Ans: THM{But_1ts_n0t_my_f4ult!}
+Answer: THM{But_1ts_n0t_my_f4ult!}
 
 ### Task 16  7. Identification and Authentication Failures
 ![Authentication Failures](https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/1cadd89ea0ec694110f3539c9592a32f.png)  
@@ -622,7 +622,7 @@ What is the flag that you found in darren's account?
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_017.png)
 
-Ans: fe86079416a21a3c99937fea8874b667
+Answer: fe86079416a21a3c99937fea8874b667
 
 Now try to do the same trick and see if you can log in as arthur.  
 
@@ -630,7 +630,7 @@ What is the flag that you found in arthur's account?
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_018.png)
 
-Ans: d9ac0f7db4fda460ac3edeb75d75e16e
+Answer: d9ac0f7db4fda460ac3edeb75d75e16e
 ### Task 18  8. Software and Data Integrity Failures
 What is Integrity?  
 
@@ -692,7 +692,7 @@ What is the SHA-256 hash of `https://code.jquery.com/jquery-1.12.4.min.js`?
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_019.png)
 
-Ans: sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=
+Answer: sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=
 
 ### Task 20  Data Integrity Failures
 Data Integrity Failures
@@ -735,7 +735,7 @@ Answer the questions below
 Try logging into the application as guest. What is guest's account password?
 
 Went for the most obvious one since there were no given clues.
-Ans: guest
+Answer: guest
 
 If your login was successful, you should now have a JWT stored as a cookie in your browser. Press F12 to bring out the Developer Tools.
 
@@ -753,7 +753,7 @@ What is the name of the website's cookie containing a JWT token?
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_020.png)
 
-Ans: jwt-session
+Answer: jwt-session
 
 Use the knowledge gained in this task to modify the JWT token so that the application thinks you are the user "admin".
 
@@ -777,7 +777,7 @@ What is the flag presented to the admin user?
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_021.png)
 
-Ans: THM{Dont_take_cookies_from_strangers}
+Answer: THM{Dont_take_cookies_from_strangers}
 
 ### Task 21  9. Security Logging and Monitoring Failures
 When web applications are set up, every action performed by the user should be logged. Logging is important because, in the event of an incident, the attackers' activities can be traced. Once their actions are traced, their risk and impact can be determined. Without logging, there would be no way to tell what actions were performed by an attacker if they gain access to particular web applications. The more significant impacts of these include:
@@ -808,11 +808,11 @@ Put this knowledge to practice by analysing the provided sample log file. You ca
 
 What IP address is the attacker using?
 
-Ans: `49.99.13.16`
+Answer: `49.99.13.16`
 
 What kind of attack is being carried out?  
 
-Ans: Brute Force
+Answer: Brute Force
 ### Task 22  10. Server-Side Request Forgery (SSRF)
 Server-Side Request Forgery
 
@@ -862,17 +862,17 @@ Explore the website. What is the only host allowed to access the admin area?
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_022.png)
 
-Ans: localhost
+Answer: localhost
 
 Check the "Download Resume" button. Where does the server parameter point to?
 
- Ans: secure-file-storage.com
+ Answer: secure-file-storage.com
 
 Using SSRF, make the application send the request to your AttackBox instead of the secure file storage. Are there any API keys in the intercepted request?
 
 ![](../screenshots/OWASP%20Top%2010%20-%202021/OWASPTop102021_023.png)
 
-Ans: THM{Hello_Im_just_an_API_key}
+Answer: THM{Hello_Im_just_an_API_key}
 
 **Going the Extra Mile:** There's a way to use SSRF to gain access to the site's admin area. Can you find it? 
 

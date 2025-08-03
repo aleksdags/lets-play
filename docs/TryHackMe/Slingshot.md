@@ -16,7 +16,7 @@ What was the attacker's IP?
 
 Look at remote addresses with http response 401 for anyone trying to access unauthorized pages, we only get 10.0.2.15.
 
-Ans: 10.0.2.15
+Answer: 10.0.2.15
 
 ![](../screenshots/Slingshot/Slingshot_001.png)
 
@@ -26,13 +26,13 @@ Filter 10.0.2.15 events from old-new. Scanning the top events there are entires 
 
 ![](../screenshots/Slingshot/Slingshot_002.png)
 
-Ans: Nmap Scripting Engine
+Answer: Nmap Scripting Engine
 
 What was the User Agent of the directory enumeration tool that the attacker used on the web server?
 
 ![](../screenshots/Slingshot/Slingshot_003.png)
 
-Ans: Mozilla/5.0 (Gobuster)
+Answer: Mozilla/5.0 (Gobuster)
 
 In total, how many requested resources on the web server did the attacker fail to find?  
 
@@ -40,7 +40,7 @@ Look at 404 responses in response.status
 
 ![](../screenshots/Slingshot/Slingshot_004.png)
 
-Ans: 1867
+Answer: 1867
 
 What is the flag under the interesting directory the attacker found?  
 
@@ -48,7 +48,7 @@ We can look at response.status 200 and scan through the request_line or search t
 
 ![](../screenshots/Slingshot/Slingshot_005.png)
 
-Ans: a76637b62ea99acda12f5859313f539a 
+Answer: a76637b62ea99acda12f5859313f539a 
 
 What login page did the attacker discover using the directory enumeration tool?  
 
@@ -56,7 +56,7 @@ We can use the interesting fields to look for the login page.
 
 ![](../screenshots/Slingshot/Slingshot_006.png)
 
-Ans: /admin-login.php
+Answer: /admin-login.php
 
 What was the user agent of the brute-force tool that the attacker used on the admin panel?
 
@@ -64,7 +64,7 @@ Filter /admin-login.php then look at the User-Agent field.
 
 ![](../screenshots/Slingshot/Slingshot_007.png)
 
-Ans: Mozilla/4.0 (Hydra)
+Answer: Mozilla/4.0 (Hydra)
 
 
 What username:password combination did the attacker use to gain access to the admin page?
@@ -73,14 +73,14 @@ Filter /admin-login.php with response 200. Looking at the events there is a fiel
 
 ![](../screenshots/Slingshot/Slingshot_008.png)
 ![](../screenshots/Slingshot/Slingshot_009.png)
-Ans: admin:thx1138
+Answer: admin:thx1138
 
 What flag was included in the file that the attacker uploaded from the admin directory?  
 Since the attacker uploaded a file, we can look at PUT requests. Rightaway there is a filename in one of the event's request.body. Scan the event further and we can see the contents of the file.
 
 ![](../screenshots/Slingshot/Slingshot_010.png)
 
-Ans: THM{ecb012e53a58818cbd17a924769ec447}
+Answer: THM{ecb012e53a58818cbd17a924769ec447}
 
 What was the first command the attacker ran on the web shell?  
 
@@ -88,7 +88,7 @@ Filter all webshell events with ```transaction.remote_address : "10.0.2.15" and 
 
 ![](../screenshots/Slingshot/Slingshot_011.png)
 
-Ans: whoami
+Answer: whoami
 
 What file location on the web server did the attacker extract database credentials from using **Local File Inclusion**?  
 
@@ -96,17 +96,17 @@ FIlter php events then scan the http.url field
 
 ![](../screenshots/Slingshot/Slingshot_012.png)
 
-Ans: /etc/phpmyadmin/config-db.php
+Answer: /etc/phpmyadmin/config-db.php
 
 What **directory** did the attacker use to access the database manager?  
 
-Ans: /phpmyadmin
+Answer: /phpmyadmin
 
 What was the name of the database that the attacker **exported**?  
 
 
 
-Ans: customer_credit_cards
+Answer: customer_credit_cards
 
 What flag does the attacker **insert** into the database?
 
@@ -114,7 +114,7 @@ Filter SQL events and select the request.body field. There is only one event tha
 
 ![](../screenshots/Slingshot/Slingshot_013.png)
 
-Ans: c6aa3215a7d519eeb40a660f3b76e64c
+Answer: c6aa3215a7d519eeb40a660f3b76e64c
 
 # Task 2  Conclusion
 

@@ -54,7 +54,7 @@ index="main" source="WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode
 
 ![](../screenshots/Conti/Conti_001.png)
 
-Ans: `C:\Users\Administrator\Documents\cmd.exe`
+Answer: `C:\Users\Administrator\Documents\cmd.exe`
 
 What is the Sysmon event ID for the related file creation event?  
 
@@ -62,7 +62,7 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 
 ![](../screenshots/Conti/Conti_002.png)
 
-Ans: 11
+Answer: 11
 
 Can you find the MD5 hash of the ransomware?  
 
@@ -70,7 +70,7 @@ Can you find the MD5 hash of the ransomware?
 index="main" source="WinEventLog:Microsoft-Windows-Sysmon/Operational" Image="C:\\Users\\Administrator\\Documents\\cmd.exe" Hashes="*"
 ```
 
-Ans: `290c7dfb01e50cea9e19da81a781af2c`
+Answer: `290c7dfb01e50cea9e19da81a781af2c`
 
 What file was saved to multiple folder locations?
 
@@ -80,7 +80,7 @@ index="main" source="WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode
 
 ![](../screenshots/Conti/Conti_003.png)
 
-Ans: readme.txt
+Answer: readme.txt
 
 What was the command the attacker used to add a new user to the compromised system?
 
@@ -90,7 +90,7 @@ I decided to filter the parentcommandline to see
 index="main" source="WinEventLog:Microsoft-Windows-Sysmon/Operational"| rare limit=20 ParentCommandLine
 ```
 
-Ans: `net user /add securityninja hardToHack123$`
+Answer: `net user /add securityninja hardToHack123$`
 
 The attacker migrated the process for better persistence. What is the migrated process image (executable), and what is the original process image (executable) when the attacker got on the system?
 
@@ -104,7 +104,7 @@ Hint said to look at Event Code 8, there are only 2 entries here which I assumed
 
 Adding SourceImage in the selecting field shows us the answers.
 
-Ans: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,  C:\Windows\System32\wbem\unsecapp.exe `
+Answer: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,  C:\Windows\System32\wbem\unsecapp.exe `
 
 The attacker also retrieved the system hashes. What is the process image used for getting the system hashes?  
 
@@ -116,7 +116,7 @@ On the other hand, unsecapp.exe is used to execute WMI scipts.
 
 ![](../screenshots/Conti/Conti_005.png)
 
-Ans: `C:\Windows\System32\lsass.exe`
+Answer: `C:\Windows\System32\lsass.exe`
 
 What is the web shell the exploit deployed to the system?  
 
@@ -130,17 +130,17 @@ index="main" sourcetype=iis cs_method=POST
 
 Webshell deployed in IIS are in aspx
 
-Ans: `/owa/auth/i3gfPctK1c2x.aspx`
+Answer: `/owa/auth/i3gfPctK1c2x.aspx`
 
 What is the command line that executed this web shell?  
 
 Moved back to sysmon logs and filtered the .aspx extension.
 
-Ans:
+Answer:
 ```
 [attrib.exe -r \\\\win-aoqkg2as2q7.bellybear.local\C$\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy\owa\auth\i3gfPctK1c2x.aspx](http://10.10.175.111:8000/en-US/app/search/search?earliest=0&latest=&q=search%20index%3D%22main%22%20source%3D%22WinEventLog%3AMicrosoft-Windows-Sysmon%2FOperational%22%20.aspx&display.page.search.mode=smart&dispatch.sample_ratio=1&workload_pool=&display.events.fields=%5B%22host%22%2C%22source%22%2C%22sourcetype%22%2C%22cs_uri_stem%22%5D&display.prefs.fieldFilter=&display.general.type=events&display.visualizations.charting.chart=line&display.page.search.tab=events&sid=1714487382.104#)
 ```
 
 What three CVEs did this exploit leverage?  
 
-Ans: CVE-2020-0796,CVE-2018-13374, CVE-2018-13379
+Answer: CVE-2020-0796, CVE-2018-13374, CVE-2018-13379

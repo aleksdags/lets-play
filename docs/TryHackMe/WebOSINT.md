@@ -39,31 +39,31 @@ Anyway, let's see what we can find out!
 
 What is the name of the company the domain was registered with?
 
-Ans: NAMECHEAP INC
+Answer: NAMECHEAP INC
 
 ![](../screenshots/WebOSINT/webosint_screenshot_001.png)
 
 What phone number is listed for the registration company? (do not include country code or special characters/spaces)
 
-Ans: 6613102107
+Answer: 6613102107
 
 ![](../screenshots/WebOSINT/webosint_screenshot_002.png)
 
 What is the first nameserver listed for the site?
 
-Ans: NS1.BRAINYDNS.COM
+Answer: NS1.BRAINYDNS.COM
 
 ![](../screenshots/WebOSINT/webosint_screenshot_003.png)
 
 What is listed for the name of the registrant?
 
-Ans: Redacted for Privacy
+Answer: Redacted for Privacy
 
 ![](../screenshots/WebOSINT/webosint_screenshot_004.png)
 
 What country is listed for the registrant?
 
-Ans: Panama
+Answer: Panama
 The current registrant is located in Iceland however it is not the answer, after looking up the question, the accepted answer is Panama. The question needs to be updated. 
 
 ![](../screenshots/WebOSINT/webosint_screenshot_005.png)
@@ -86,7 +86,7 @@ What is the first name of the blog's author?
 
 Find the first capture of the link. Open one article and the name should be there.
 
-Ans: Steve
+Answer: Steve
 
 ![](../screenshots/WebOSINT/webosint_screenshot_006.png)
 
@@ -107,7 +107,7 @@ Other clues can be seen on the list of articles.
 
 
 ![](../screenshots/WebOSINT/webosint_screenshot_008.png)
-Ans: Gwangju, South Korea
+Answer: Gwangju, South Korea
 
 [Research] What is the name (in English) of the temple inside the National Park the author frequently visits?
 
@@ -140,7 +140,7 @@ Use the IP History tool
 
 Based on the other domains hosted on the same IP address, what kind of hosting service can we safely assume our target uses?
 
-Ans: shared
+Answer: shared
 
 I'm not really familiar with hosting options so had to look it up.
 
@@ -148,7 +148,7 @@ How many times has the IP address changed in the history of the domain?
 
 Since the room is already 2 years old. There's been a lot of changes to the IP. I had to look it up.
 
-Ans: 4
+Answer: 4
 
 
 # Task 5  Taking Off The Training Wheels
@@ -166,19 +166,19 @@ Good luck!
 
 What is the second nameserver listed for the domain?
 
-Ans: NS2.HEAT.NET
+Answer: NS2.HEAT.NET
 
 ![](../screenshots/WebOSINT/webosint_screenshot_012.png)
 
 What IP address was the domain listed on as of December 2011?
 
-Ans: 72.52.192.240
+Answer: 72.52.192.240
 
 ![](../screenshots/WebOSINT/webosint_screenshot_013.png)
 
 Based on domains that share the same IP, what kind of hosting service is the domain owner using?
 
-Ans: Shared
+Answer: Shared
 There were no domains at the time of answering, so basing off the clue, I answered shared.
 
 
@@ -186,25 +186,25 @@ There were no domains at the time of answering, so basing off the clue, I answer
 
 On what date did was the site first captured by the internet archive? (MM/DD/YY format)
 
-Ans: 06/01/97
+Answer: 06/01/97
 
 ![](../screenshots/WebOSINT/webosint_screenshot_015.png)
 
 What is the first sentence of the first body paragraph from the final capture of 2001?
 
-Ans: After years of great online gaming, it’s time to say good-bye.
+Answer: After years of great online gaming, it’s time to say good-bye.
 
 ![](../screenshots/WebOSINT/webosint_screenshot_016.png)
 
 Using your search engine skills, what was the name of the company that was responsible for the original version of the site? 
 
-Ans: Segasoft
+Answer: Segasoft
 
 ![](../screenshots/WebOSINT/webosint_screenshot_017.png)
 
 What does the first header on the site on the last capture of 2010 say?
 
-Ans: Heat.net – Heating and Cooling
+Answer: Heat.net – Heating and Cooling
 
 ![](../screenshots/WebOSINT/webosint_screenshot_018.png)
 # Task 6  Taking A Peek Under The Hood Of A Website
@@ -260,7 +260,7 @@ Have at it!
 
 How many internal links are in the text of the article?
 
-Ans: 5
+Answer: 5
 ```
 http://www.heat.net/39/save-money-on-your-commercial-heating-bill/
 http://www.heat.net/36/need-to-hire-a-commercial-heating-contractor/
@@ -271,24 +271,24 @@ http://www.heat.net/15/cutting-your-heating-costs-without-emptying-your-wallet/
 
 How many external links are in the text of the article?
 
-Ans: 1
+Answer: 1
 `http://www.purchase.org/`
 
 Website in the article's only external link ( that isn't an ad)
 
-Ans: purchase.org
+Answer: purchase.org
 
 Try to find the Google Analytics code linked to the site
 
-Ans: UA-251372-24
+Answer: UA-251372-24
 
 Is the the Google Analytics code in use on another website? Yay or nay
 
-Ans: nay
+Answer: nay
 
 Does the link to this website have any obvious affiliate codes embedded with it? Yay or Nay
 
-Ans: nay
+Answer: nay
 
 # Task 7  Final Exam: Connect the Dots
 
@@ -316,7 +316,7 @@ purchase.org IP History
 
 Both used to be owned by LIQUIDWEB, however it does not match the given clue in the answer, and I wasn't sure where to look next. I tried using WHOIS but it didn't really help me. Looking at an online writeup apparently it is liquidweb but written differently. The correct answer is liquid web, l.l.c
 
-Ans: liquid web, l.l.c
+Answer: liquid web, l.l.c
 
 # Task 8  Debriefing
 

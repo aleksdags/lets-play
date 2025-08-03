@@ -31,7 +31,7 @@ What is the name of the host in the Data Summary tab?
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_003.png)
 
-Ans:  cyber-host
+Answer:  cyber-host
 ### Task 3  Search & Reporting App Overview
 **Search & Reporting App** is the default interface used to search and analyze the data on the Splunk Home page. It has various functionalities that assist analysts in improving the search experience.
 
@@ -81,13 +81,13 @@ In the search History, what is the 7th search query in the list? (excluding you
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_004.png)
 
-Ans: ```index=windowslogs | chart count(EventCode) by Image```
+Answer: ```index=windowslogs | chart count(EventCode) by Image```
 
 In the left field panel, which Source IP has recorded max events?  
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_005.png)
 
-Ans: 172.90.12.11
+Answer: 172.90.12.11
 
 How many events are returned when we apply the time filter to display events on 04/15/2022 and Time from 08:05 AM to 08:06 AM?
 
@@ -95,7 +95,7 @@ Use the Date time range and change the parameter to between. Set the given date 
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_006.png)
 
-Ans: 134
+Answer: 134
 ### Task 4  Splunk Processing Language Overview
 
 Splunk Search Processing Language comprises of multiple functions, operators and commands that are used together to form a simple to complex search and get the desired results from the ingested logs. Main components of SPL are explained below:
@@ -166,7 +166,7 @@ index=windowslogs EventID=1 AND User=*James*
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_007.png)
 
-Ans: 4
+Answer: 4
 
 How many events are observed with Destination IP 172.18.39.6 AND destination Port 135?  
 
@@ -176,14 +176,14 @@ index=windowslogs DestinationIp=172.18.39.6 AND DestinationPort="135"
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_008.png)
 
-Ans: 4
+Answer: 4
 
 What is the Source IP with highest count returned with this Search query?  
 Search Query: index=windowslogs  Hostname="Salena.Adam" DestinationIp="172.18.38.5"  
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_009.png)
 
-Ans: 172.90.12.11
+Answer: 172.90.12.11
 
 In the index windowslogs, search for all the events that contain the term **cyber** how many events returned?
 
@@ -193,13 +193,13 @@ index=windowslogs cyber
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_010.png)
 
-Ans: 0
+Answer: 0
 
 Now search for the term **cyber\***, how many events are returned?
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_011.png)
 
-Ans: 12256
+Answer: 12256
 
 ### Task 5  Filtering the Results in SPL
 Our network generates thousands of logs each minute, all ingesting into our SIEM solution. It becomes a daunting task to search for any anomaly without using filters. SPL allows us to use **Filters** to narrow down the result and only show the important events that we are interested in. We can add or remove certain data from the result using filters. The following commands are useful in applying filters to the search results.
@@ -276,7 +276,7 @@ Search Query: `index=windowslogs | table _time EventID Hostname SourceName | re
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_012.png)
 
-Ans: 4103
+Answer: 4103
 
 Use the dedup command against the Hostname field before the reverse command in the query mentioned in Question 1. What is the first username returned in the Hostname field?
 
@@ -287,7 +287,7 @@ index=windowslogs | table _time EventID Hostname SourceName | dedup Hostname
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_013.png)
 
-Ans: Salena.Adam
+Answer: Salena.Adam
 
 # Task 6  SPL - Structuring the Search Results
 SPL provides various commands to bring structure or order to the search results. These sorting commands like `head`, `tail`, and `sort` can be very useful during logs investigation. These ordering commands are explained below:
@@ -376,7 +376,7 @@ index=windowslogs | table _time EventID Hostname SourceName
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_014.png)
 
-Ans: James.browne
+Answer: James.browne
 
 What is the last EventID returned when the query in question 1 is updated with the **tail** command?
 
@@ -387,7 +387,7 @@ index=windowslogs | table _time EventID Hostname SourceName
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_015.png)
 
-Ans: 4103
+Answer: 4103
 
 Sort the above query against the SourceName. What is the top SourceName returned?
 
@@ -398,7 +398,7 @@ index=windowslogs | table _time EventID Hostname SourceName
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_016.png)
 
-Ans: Microsoft-Windows-Directory-Services-SAM
+Answer: Microsoft-Windows-Directory-Services-SAM
 
 # Task 7  Transformational Commands in SPL
 
@@ -513,7 +513,7 @@ index=windowslogs
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_017.png)
 
-Ans: 196
+Answer: 196
 
 Using the rare command, identify the user with the least number of activities captured?
 
@@ -524,7 +524,7 @@ index=windowslogs
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_018.png)
 
-Ans: James
+Answer: James
 
 Create a pie-chart using the chart command - what is the count for the conhost.exe process?
 
@@ -535,7 +535,7 @@ index=windowslogs
 
 ![](../screenshots/Splunk%20Exploring%20SPL/Splunk_Exploring_SPL_019.png)
 
-Ans: 70
+Answer: 70
 
 # Task 8  Recap and Conclusion
 This wraps up the Splunk SPL room.
